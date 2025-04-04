@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header-hero">
+        <nav class="nav-scrolled">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo-container">
+                <div class="logo">UrbanScale</div>
+            </div>
+
+            <button class="logout-btn" onclick="showLogoutModal()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+
+            <div class="nav-links">
+                <a href="home2.html">Home</a>
+                <a href="properties.html">Properties</a>
+                <a href="residential.html">Residentials</a>
+                <a href="home2.html#social-clubs">Clubs</a>
+                <a href="new-added-props.html">Newly Added Properties</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+        </nav>
+    </header>
+
+    <!-- Add Membership Notification Section -->
+    <section class="membership-notification" id="membership-notifications">
+        <!-- Notifications will be loaded here dynamically -->
+    </section>
+
+    <section class="profile-section">
+        <div class="container">
+            <h2>User Profile</h2>
+            <div class="profile-card">
+                <div class="profile-info">
+                    <p><strong>Name:</strong> <span id="user-name">Test</span></p>
+                    <p><strong>Email:</strong> <span id="user-email"></span></p>
+                    <p><strong>Phone:</strong> <span id="user-phone"></span></p>
+                    <p><strong>User Type:</strong> <span id="user-type"></span></p>
+                </div>
+                <div class="profile-actions">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Visit Status Section -->
+    <section class="visit-status-section">
+        <div class="container">
+            <h2>Visit Status</h2>
+            <div id="visit-status-container" class="visit-status-grid">
+                <!-- Visit status cards will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Wishlist Section -->
+    <section class="wishlist-section">
+        <div class="container">
+            <h2>My Wishlist</h2>
+            <div id="wishlist-properties" class="properties-grid">
+                <!-- Wishlist properties will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>UrbanScale</h3>
+                <p>Your trusted partner in real estate</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: urbanscale.info@gmail.com </p>
+                <p>Phone: +91 9982399786</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to logout?</p>
+            <div class="modal-actions">
+                <button class="modal-btn no-btn" onclick="closeLogoutModal()">No</button>
+                <button class="modal-btn yes-btn" onclick="handleLogout()">Yes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/profile.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

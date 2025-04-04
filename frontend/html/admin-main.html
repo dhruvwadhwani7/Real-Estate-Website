@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - UrbanScape</title>
+    <link rel="stylesheet" href="../css/admin-main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+</head>
+<body>
+    <nav class="admin-nav">
+        <div class="logo-container">
+            <span class="logo">UrbanScape Admin</span>
+        </div>
+        
+        <div class="nav-links">
+            <a href="#users" class="active">Users</a>
+            <div class="dropdown">
+                <a href="#properties">Properties <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="admin-new-added-props.html">Newly Added Properties</a>
+                    <a href="admin-general-enq.html">General Enquiries</a>
+                    <a href="admin-schedule-visit.html">Scheduled Visits</a>
+                </div>
+            </div>
+            <a href="admin-club-membership.html">Club Memberships</a>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </nav>
+
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1>Welcome, <span id="adminName"></span></h1>
+            <button id="showUserList" class="user-list-btn">
+                <i class="fas fa-users"></i> Show User List
+            </button>
+        </div>
+
+        <!-- User List Modal -->
+        <div id="userListModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>User List</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="filter-section">
+                    <select id="userTypeFilter">
+                        <option value="all">All Users</option>
+                        <option value="seller">Sellers</option>
+                        <option value="buyer">Buyers</option>
+                        <option value="admin">Admins</option>
+                    </select>
+                </div>
+                <div class="table-container">
+                    <table id="userTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Type</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- User data will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <h2>Users in Urban Scale</h2>
+            <div class="stats-grid">
+                <div class="stats-box sellers">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Sellers</h3>
+                    <p id="sellerCount">0</p>
+                </div>
+                <div class="stats-box buyers">
+                    <i class="fas fa-users"></i>
+                    <h3>Buyers</h3>
+                    <p id="buyerCount">0</p>
+                </div>
+                <div class="stats-box admins">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Admins</h3>
+                    <p id="adminCount">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <h2>User Distribution</h2>
+            <div class="chart-container">
+                <canvas id="userDistributionChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <h2>User Growth Trend</h2>
+            <div class="chart-container">
+                <canvas id="userGrowthChart"></canvas>
+            </div>
+        </div>
+
+        <div class="admin-dashboard">
+            <!-- Dashboard content will be added here -->
+        </div>
+    </div>
+
+    <script src="../js/admin-main.js"></script>
+</body>
+</html>

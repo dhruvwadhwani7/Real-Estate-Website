@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - UrbanScape Real Estate</title>
+    <link rel="stylesheet" href="../css/buyer-chat.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Updated Navigation Bar -->
+    <header>
+        <nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo-container">
+                <div class="logo">UrbanScale</div>
+            </div>
+            <div class="nav-links">
+                <a href="home2.html">Home</a>
+                <a href="properties.html">Properties</a>
+                <a href="residential.html">Residentials</a>
+                <a href="home.html#social-clubs">Clubs</a>
+                <a href="new-added-props.html">Newly Added Properties</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='profile.html'" class="profile-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+                <!-- <button onclick="showLogoutModal()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button> -->
+            </div>
+        </nav>
+
+        <div class="menu-overlay"></div>
+
+        <div class="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="home.html"><i class="fas fa-home"></i>Home</a>
+                <a href="properties.html"><i class="fas fa-building"></i>Properties</a>
+                <a href="residential.html"><i class="fas fa-city"></i>Residentials</a>
+                <a href="home.html#social-clubs"><i class="fas fa-users"></i>Clubs</a>
+                <a href="#ask-ai"><i class="fas fa-robot"></i>Ask AI</a>
+                <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
+            </div>
+            <div class="mobile-auth-buttons">
+                <button class="mobile-sign-in">Sign In</button>
+                <button class="mobile-sign-up">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <h1 class="chat-heading">Chat with our sellers</h1>
+
+    <div class="chat-container">
+        <!-- Sellers List Sidebar -->
+        <aside class="sellers-sidebar">
+            <div class="sidebar-header">
+                <h2>Available Contacts</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="Search contacts...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="sellers-list">
+                <!-- Sellers will be populated here dynamically -->
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <div class="chat-header">
+                <div class="current-chat-info">
+                    <!-- <img src="../../img/images/favicon.png" alt="Profile" class="chat-profile-img"> -->
+                    <div class="chat-user-info">
+                        <h3>Select a contact</h3>
+                        <p class="status">No active chat</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-messages">
+                <!-- Messages will be populated here -->
+                <div class="no-chat-selected">
+                    <i class="fas fa-comments"></i>
+                    <p>Select a contact to start chatting</p>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" 
+                       placeholder="Type a message..." 
+                       disabled
+                       aria-label="Message input">
+                <button class="send-btn" disabled title="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Property Selection Modal -->
+    <div class="property-selection-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Properties by <span class="seller-name"></span></h2>
+            <div class="seller-properties-grid"></div>
+        </div>
+    </div>
+
+    <script src="../js/propertyData.js"></script>
+    <script src="../js/buyer-chat.js"></script>
+</body>
+</html>

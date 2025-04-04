@@ -1,0 +1,786 @@
+.residential-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.residential-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.residential-card:hover {
+    transform: translateY(-5px);
+}
+
+.residential-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.residential-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-status {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.residential-details {
+    padding: 1.5rem;
+}
+
+.project-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.project-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.project-specs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+}
+
+.project-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-tag {
+    background: rgba(52, 152, 219, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: #3498db;
+}
+
+.feature-tag:hover {
+    background: #3498db;
+    color: white;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.starting-price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3498db;
+}
+
+.view-details {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.view-details:hover {
+    background: #2980b9;
+}
+
+/* Map Section Styles */
+.map-section {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    background: #f8f9fa;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.map-section.map-collapsed {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+#residential-map {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.map-section.map-collapsed #residential-map {
+    opacity: 0;
+}
+
+.map-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    padding: 5px;
+}
+
+.toggle-map {
+    background: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+.toggle-map:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Map Marker Styles */
+.custom-marker {
+    position: relative;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-marker i {
+    font-size: 24px;
+    color: var(--marker-color, #3498db);
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.custom-marker .marker-price {
+    background: white;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #2c3e50;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: -5px;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.custom-marker:hover {
+    z-index: 1;
+}
+
+.custom-marker:hover i {
+    transform: scale(1.2);
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.4));
+}
+
+.custom-marker:hover .marker-price {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced Custom Map Marker Styles */
+.marker-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marker-tooltip {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translate(-50%, -100%) scale(0.8);
+    background: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    min-width: 150px;
+    text-align: center;
+    z-index: 1;
+}
+
+.marker-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid white;
+}
+
+.marker-tooltip h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.marker-tooltip .marker-price {
+    font-size: 11px;
+    font-weight: 600;
+    color: #3498db;
+    margin: 2px 0;
+}
+
+.marker-tooltip .marker-type {
+    font-size: 10px;
+    color: #666;
+}
+
+.custom-marker:hover .marker-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -100%) scale(1);
+}
+
+/* Update Popup Styles */
+.mapboxgl-popup {
+    max-width: 250px;
+}
+
+.mapboxgl-popup-content {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-info-window {
+    font-family: 'Poppins', sans-serif;
+}
+
+.map-info-window h3 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.map-info-window p {
+    margin: 4px 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.map-info-window .price {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.map-info-window .type {
+    background: #f8f9fa;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+/* Modal Styles */
+.project-modal {
+    /* Similar styles as property modal */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .residential-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CTA Section Styles */
+.cta-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #083e74, #2980b9);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-enquire-btn {
+    background: white;
+    color: #3498db;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-enquire-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-content p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Luxury Blog Section Styles */
+.luxury-blog {
+    padding: 4rem 0;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+}
+
+.blog-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    padding: 0 2rem;
+}
+
+/* Enhanced Blog Image Hover Effects */
+.blog-image {
+    position: relative;
+    height: 100%;
+    min-height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: brightness(0.9);
+}
+
+.blog-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.2), rgba(41, 128, 185, 0.2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    background: linear-gradient(
+        to bottom,
+        rgba(52, 152, 219, 0.1) 0%,
+        rgba(41, 128, 185, 0.95) 100%
+    );
+}
+
+.image-overlay-content {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.image-overlay h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.image-overlay p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 80%;
+    line-height: 1.6;
+}
+
+.enquire-btn {
+    padding: 1rem 2rem;
+    background: white;
+    color: #3498db;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.enquire-btn:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.blog-image:hover .image-overlay {
+    opacity: 1;
+}
+
+.blog-image:hover .image-overlay-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.blog-image:hover .enquire-btn {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-image:hover img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.2), rgba(41, 128, 185, 0.2));
+}
+
+.blog-content {
+    padding: 2rem;
+}
+
+.blog-content h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.blog-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #3498db;
+}
+
+.luxury-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.amenities-highlight {
+    margin-top: 3rem;
+}
+
+.amenities-highlight h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.amenities-grid span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #505d68;
+    font-size: 0.9rem;
+}
+
+.amenities-grid i {
+    color: #3498db;
+}
+
+.luxury-cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.luxury-cta:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .blog-image {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-features {
+        grid-template-columns: 1fr;
+    }
+
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blog-content h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Enquiry Modal */
+.enquiry-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.enquiry-modal.show {
+    opacity: 1;
+    display: block;
+}
+
+.enquiry-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.enquiry-modal.show .enquiry-modal-content {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.enquiry-modal-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    color: #3498db;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.enquiry-modal-close:hover {
+    transform: rotate(90deg);
+}
+
+.enquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.enquiry-form h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.submit-enquiry {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-enquiry:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+

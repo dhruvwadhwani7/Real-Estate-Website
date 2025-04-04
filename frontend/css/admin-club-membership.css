@@ -1,0 +1,222 @@
+/* Import base admin styles */
+@import 'admin-general-enq.css';
+
+/* Club membership specific styles */
+.stats-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+/* Club specific colors */
+.golf i { color: #2ecc71; }
+.health i { color: #e74c3c; }
+.sports i { color: #3498db; }
+.clubhouse i { color: #f39c12; }
+
+.enquiry-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    margin-bottom: 20px;
+    width: 300px; /* Fixed width for consistent layout */
+}
+
+.enquiry-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Remove .club-image class */
+
+.club-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.club-details h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.membership-type {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.membership-type.standard {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #81c784;
+}
+
+.membership-type.premium {
+    background-color: #fff3e0;
+    color: #e65100;
+    border: 1px solid #ffb74d;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.pending {
+    background-color: #fff8e1;
+    color: #f57f17;
+    border: 1px solid #ffd54f;
+}
+
+.status-badge.approved {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #81c784;
+}
+
+.status-badge.not_approved {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #e57373;
+}
+
+.actions-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+}
+
+.approve-btn, .delete-btn {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.approve-btn {
+    background: #3498db;
+    color: white;
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.2);
+}
+
+.approve-btn:hover {
+    background: #2980b9;
+}
+
+.approve-btn.approved {
+    background: #e74c3c;
+}
+
+.approve-btn.approved:hover {
+    background: #c0392b;
+}
+
+.approve-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(231, 76, 60, 0.2);
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+.delete-btn i {
+    margin-right: 5px;
+}
+
+.error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff3f3;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.error-message i {
+    color: #e74c3c;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.error-message p {
+    color: #c0392b;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Update modal buttons to match style */
+.modal-buttons .delete-btn,
+.modal-buttons .cancel-btn {
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: 500;
+    min-width: 120px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.modal-buttons .delete-btn {
+    background: #e74c3c;
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.2);
+}
+
+.modal-buttons .delete-btn:hover {
+    background: #c0392b;
+}
+
+.modal-buttons .cancel-btn {
+    background: #95a5a6;
+    color: white;
+    box-shadow: 0 4px 15px rgba(149, 165, 166, 0.2);
+}
+
+.modal-buttons .cancel-btn:hover {
+    background: #7f8c8d;
+}
+
+/* Update grid layout */
+.enquiries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}

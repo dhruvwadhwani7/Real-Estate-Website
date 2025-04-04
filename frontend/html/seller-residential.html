@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential Projects - UrbanScape Real Estate</title>
+    <link rel="stylesheet" href="../css/properties.css">
+    <link rel="stylesheet" href="../css/residential.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <!-- Similar nav structure as properties.html -->
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo-container">
+                <div class="logo">UrbanScale</div>
+            </div>
+            <div class="nav-links">
+                <a href="home3.html">Home</a>
+                <a href="sell-properties.html">Sell Properties</a>
+                <a href="residential.html" class="active">Residentials</a>
+                <a href="home3.html#social-clubs">Clubs</a>
+                <a href="seller-contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='seller-profile.html'" class="profile-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+
+                <button onclick="window.location.href='seller-chat.html'" class="message-btn">
+                    <i class="fas fa-message"></i>
+                </button>
+                <!-- <button onclick="showLogoutModal()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button> -->
+            </div>
+        </nav>
+
+        <div class="menu-overlay"></div>
+        <div class="mobile-menu">
+            <!-- Similar mobile menu as properties.html -->
+            <div class="mobile-menu-links">
+                <a href="home.html"><i class="fas fa-home"></i>Home</a>
+                <a href="properties.html"><i class="fas fa-building"></i>Properties</a>
+                <a href="residential.html"><i class="fas fa-city"></i>Residentials</a>
+                <a href="home.html#social-clubs"><i class="fas fa-users"></i>Clubs</a>
+                <a href="#ask-ai"><i class="fas fa-robot"></i>Ask AI</a>
+                <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Map Section -->
+    <div class="map-section">
+        <div id="residential-map"></div>
+        <div class="map-controls">
+            <button class="toggle-map">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Toggle Map</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Residential Projects Grid -->
+    <div class="residential-container">
+        <!-- Residential card template - Will be populated dynamically -->
+        <template id="residential-card-template">
+            <div class="residential-card">
+                <div class="residential-image">
+                    <div class="project-status">New Launch</div>
+                    <img src="" alt="Residential Project">
+                </div>
+                <div class="residential-details">
+                    <h3 class="project-name"></h3>
+                    <div class="project-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span></span>
+                    </div>
+                    <div class="project-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-building"></i>
+                            <span class="type"></span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-home"></i>
+                            <span class="bhk"></span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span class="area"></span>
+                        </div>
+                    </div>
+                    <div class="project-features">
+                        <!-- Features will be added dynamically -->
+                    </div>
+                    <div class="project-footer">
+                        <div style="font-size: medium;" class="starting-price"></div>
+                        <button class="view-details" onclick="window.location.href='residential.html#cta-section'">
+                            
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add before closing body tag -->
+    <section class="cta-section" id="cta-section">
+        <div class="cta-content">
+            <h2>Find Your Dream Home Today</h2>
+            <p>Our expert team is ready to help you discover the perfect residential property that matches your lifestyle and preferences.</p>
+            <!-- <button class="cta-enquire-btn">Enquire Now</button> -->
+        </div>
+    </section>
+
+    <section class="luxury-blog">
+        <div class="blog-container">
+            <div class="blog-image">
+                <img src="https://images.pexels.com/photos/3208317/pexels-photo-3208317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Luxury Interior">
+                <div class="image-overlay">
+                    <div class="image-overlay-content">
+                        <h3>Luxury Living Redefined</h3>
+                        <p>Discover our exclusive collection of premium residential spaces designed for the most discerning homeowners.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-content">
+                <h2>Experience Unmatched Luxury Living</h2>
+                <div class="luxury-features">
+                    <div class="feature">
+                        <i class="fas fa-concierge-bell"></i>
+                        <h3>24/7 Concierge Service</h3>
+                        <p>Round-the-clock assistance for all your needs, from maintenance to special requests.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>State-of-the-Art Fitness Center</h3>
+                        <p>Premium equipment and dedicated trainers to help you maintain your wellness routine.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-swimming-pool"></i>
+                        <h3>Infinity Pool & Spa</h3>
+                        <p>Relax and rejuvenate with our world-class pool and spa facilities.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Advanced Security</h3>
+                        <p>Multi-layer security system with 24/7 surveillance for your peace of mind.</p>
+                    </div>
+                </div>
+                <div class="amenities-highlight">
+                    <h3>Premium Amenities</h3>
+                    <div class="amenities-grid">
+                        <span><i class="fas fa-car-side"></i> Valet Parking</span>
+                        <span><i class="fas fa-glass-cheers"></i> Sky Lounge</span>
+                        <span><i class="fas fa-theater-masks"></i> Private Theater</span>
+                        <span><i class="fas fa-golf-ball"></i> Golf Simulator</span>
+                        <span><i class="fas fa-wine-glass-alt"></i> Wine Cellar</span>
+                        <span><i class="fas fa-child"></i> Kids' Play Area</span>
+                    </div>
+                </div>
+                <a href="contact.html" class="luxury-cta">Schedule a Private Tour</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Scripts -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <script>
+        // Remove the Mapbox token since we're using MapTiler
+        mapboxgl.accessToken = 'dummy'; // Required by mapbox-gl but not used with MapTiler
+    </script>
+    <script src="../js/residentialData.js"></script>
+    <script src="../js/residential.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

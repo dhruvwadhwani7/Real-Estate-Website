@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details - UrbanScape Real Estate</title>
+    <link rel="stylesheet" href="../css/property-main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <!-- Updated Navigation Bar -->
+    <header>
+        <nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo-container">
+                <div class="logo">UrbanScale</div>
+            </div>
+            <div class="nav-links">
+                <a href="home2.html">Home</a>
+                <a href="properties.html" class="active">Properties</a>
+                <a href="residential.html">Residentials</a>
+                <a href="home2.html#social-clubs">Clubs</a>
+                <a href="new-added-props.html">Newly Added Properties</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='profile.html'" class="profile-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+
+                <button onclick="window.location.href='buyer-chat.html'" class="message-btn">
+                    <i class="fas fa-message"></i>
+                </button>
+                <!-- <button onclick="showLogoutModal()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button> -->
+            </div>
+            
+        </nav>
+
+        <div class="menu-overlay"></div>
+
+        <div class="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="home.html"><i class="fas fa-home"></i>Home</a>
+                <a href="properties.html"><i class="fas fa-building"></i>Properties</a>
+                <a href="home.html#residential-projects"><i class="fas fa-city"></i>Residentials</a>
+                <a href="home.html#social-clubs"><i class="fas fa-users"></i>Clubs</a>
+                <a href="#ask-ai"><i class="fas fa-robot"></i>Ask AI</a>
+                <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
+            </div>
+            <div class="mobile-auth-buttons">
+                <button class="mobile-sign-in">Sign In</button>
+                <button class="mobile-sign-up">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="property-details-container">
+        <!-- Property Banner Section -->
+        <section class="property-banner">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Property Main View" id="mainImage">
+            <div class="banner-overlay">
+                <h1 id="propertyTitle">Luxury Villa with Ocean View</h1>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="propertyLocation">123 Ocean Drive, Miami Beach</span>
+                </div>
+                <div class="banner-price" id="propertyPrice">$2,500,000</div>
+            </div>
+        </section>
+
+        <!-- Key Features and Details -->
+        <section class="features-section">
+            <div class="key-features">
+                <div class="feature"><i class="fas fa-bed"></i><span id="bedrooms"></span></div>
+                <div class="feature"><i class="fas fa-bath"></i><span id="bathrooms"></span></div>
+                <div class="feature"><i class="fas fa-ruler-combined"></i><span id="area"></span></div>
+                <div class="feature"><i class="fas fa-car"></i><span id="parking"></span></div>
+            </div>
+            
+            <div class="property-description">
+                <p id="propertyDescription"></p>
+            </div>
+        </section>
+
+        <!-- Two Column Layout -->
+        <div class="content-grid">
+            <!-- Left Column -->
+            <div class="main-content">
+                <!-- Add Wishlist Button -->
+                <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                    <span>Add to Wishlist</span>
+                </button>
+
+                <!-- Property Details -->
+                <section class="details-section">
+                    <h2>Property Details</h2>
+                    <div class="details-grid" id="propertyDetails"></div>
+                </section>
+
+                <br>
+                <br>
+
+                <!-- Amenities -->
+                <section class="amenities-section">
+                    <h2>Amenities</h2>
+                    <div class="amenities-grid" id="propertyAmenities"></div>
+                </section>
+
+                <!-- Location -->
+                <section class="location-section">
+                    <h2>Location</h2>
+                    <!-- <div class="map-section">
+                        <div id="propertyMap" class="property-map"></div>
+                        <div class="map-controls">
+                            <button class="toggle-map">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Show Map</span>
+                            </button>
+                        </div>
+                    </div> -->
+                    <div class="nearby-places" id="nearbyPlaces"></div>
+                    <!-- <div class="nearby-amenities">
+                        <a href="club.html" class="club-link">View Nearby Clubs</a>
+                    </div> -->
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="sidebar">
+                <!-- Property Navigation -->
+                <div class="property-nav">
+                    <h3>Other Properties</h3>
+                    <div id="propertyNavLinks" class="property-nav-links"></div>
+                </div>
+                <!-- Contact Form -->
+                <!-- <div class="contact-card">
+                    <h3>Interested in this property?</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone" required>
+                        <button type="submit" class="contact-btn">Contact Agent</button>
+                    </form>
+                </div> -->
+
+                <!-- Share Options -->
+                <div class="share-options">
+                    <button class="share-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i> Share on WhatsApp
+                    </button>
+                    <button class="share-btn email" onclick="showEmailModal()">
+                        <i class="fas fa-envelope"></i> Share via Email
+                    </button>
+                </div>
+                <!-- Add Email Modal -->
+                <div id="emailModal" class="email-modal">
+                    <div class="email-modal-content">
+                        <span class="close-email-modal">&times;</span>
+                        <h2>Share Property via Email</h2>
+                        <form id="emailForm">
+                            <div class="form-group">
+                                <label for="senderName">Your Name:</label>
+                                <input type="text" id="senderName" name="senderName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="senderEmail">Your Email:</label>
+                                <input type="email" id="senderEmail" name="senderEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Additional Message (optional):</label>
+                                <textarea id="message" name="message" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="send-email-btn">Send Email</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Sending mail to Urban Scale...</p>
+        </div>
+    </div>
+
+    <!-- Add Success Modal -->
+    <div id="successModal" class="success-modal">
+        <div class="success-modal-content">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h2>Success!</h2>
+            <p>Your email has been sent successfully.</p>
+            <button class="ok-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <script>
+        const defaultPropertyId = 'PROP1';
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZGhydXYxMjMiLCJhIjoiY2xzcnk2NXp6MGd6NTJrcGR5Nnptc3h4ciJ9.GdgzyF2Lj4iGqzS0077tjw';
+    </script>
+    <script src="../js/propertyData.json"></script>
+    <script src="../js/property-main.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanScape Real Estate</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header-hero">
+        <nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo-container">
+                <!-- <img src="../img/images/logo.png" alt="UrbanScape Logo" class="nav-logo"> -->
+                <div class="logo">UrbanScale</div>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active" onclick="checkLogin(event)">Home</a>
+                <a href="properties.html" onclick="checkLogin(event)">Properties</a>
+                <a href="residential.html" onclick="checkLogin(event)">Residentials</a>
+                <a href="#social-clubs" onclick="checkLogin(event)">Clubs</a>
+                <!-- <a href="#ask-ai" onclick="checkLogin(event)">Ask AI</a> -->
+                <a href="contact.html" onclick="checkLogin(event)">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='signIn.html'" class="sign-in">Sign In</button>
+                <button onclick="window.location.href='signUp.html'" class="sign-up">Sign Up</button>
+            </div>
+        </nav>
+        
+        <!-- Add overlay div after nav -->
+        <div class="menu-overlay"></div>
+
+        <!-- Update mobile menu structure -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="#home"><i class="fas fa-home"></i>Home</a>
+                <a href="properties.html"><i class="fas fa-building"></i>Properties</a>
+                <a href="residential.html"><i class="fas fa-city"></i>Residentials</a>
+                <a href="#social-clubs"><i class="fas fa-users"></i>Clubs</a>
+                <a href="#ask-ai"><i class="fas fa-robot"></i>Ask AI</a>
+                <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
+            </div>
+            <div class="mobile-auth-buttons">
+                <button class="mobile-sign-in">Sign In</button>
+                <button class="mobile-sign-up">Sign Up</button>
+            </div>
+        </div>
+
+        <div class="hero-content fade-in">
+            <h1>Find Your Dream Home</h1>
+            <p>Discover the perfect property that matches your lifestyle</p>
+            <div class="search-bar">
+                <select>
+                    <option value="" disabled selected>Select Location</option>
+                    <option value="ahmedabad">Ahmedabad</option>
+                    <option value="gurgaon">Gurgaon</option>
+                    <option value="pune">Pune</option>
+                    <option value="mumbai">Mumbai</option>
+                </select>
+                <button>Search</button>
+            </div>
+            <!-- <button class="know-more-btn" onclick="checkLogin(event)">
+                Know More
+                <i class="fas fa-arrow-right"></i>
+            </button> -->
+        </div>
+    </header>
+
+    <section id="featured-locations" class="reveal reveal-up">
+        <div class="container">
+            <h2>Featured Locations</h2>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <img src="../../img/home-1-ahm.jpg" alt="Ahmedabad">
+                    <div class="location-overlay">
+                        <h3>Ahmedabad</h3>
+                        <p>8 Projects</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <img src="../../img/home-2-gurg.jpg" alt="Gurgaon">
+                    <div class="location-overlay">
+                        <h3>Gurgaon</h3>
+                        <p>10 Projects</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <img src="../../img/home-3-pune.jpg" alt="Pune">
+                    <div class="location-overlay">
+                        <h3>Pune</h3>
+                        <p>4 Projects</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <img src="../../img/home-1-mumb.jpg" alt="Mumbai">
+                    <div class="location-overlay">
+                        <h3>Mumbai</h3>
+                        <p>4 Projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="residential-projects" class="reveal reveal-up">
+        <div class="container">
+            <h2>Residential Projects</h2>
+            <div class="projects-slider-container">
+                <button class="slider-arrow prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="projects-grid">
+                    <div class="project-group reveal reveal-left">
+                        <!-- First 3 properties -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../../img/home-4-resident(1).jpg" alt="Luxury Apartment">
+                                <div class="project-title">The Grand Vista</div>
+                                <div class="project-overlay">
+                                    <div class="project-details">
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Ahmedabad</p>
+                                        <p class="price">Starting from ₹1.2 Cr</p>
+                                        <p class="type">3 & 4 BHK Apartments</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../../img/home-6-resident(3).jpg" alt="Modern Complex">
+                                <div class="project-title">Urban Heights</div>
+                                <div class="project-overlay">
+                                    <div class="project-details">
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Mumbai</p>
+                                        <p class="price">Starting from ₹2.5 Cr</p>
+                                        <p class="type">4 BHK Premium Flats</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../../img/home-5-resident(2).jpg" alt="Luxury Villa">
+                                <div class="project-title">Green Valley</div>
+                                <div class="project-overlay">
+                                    <div class="project-details">
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Pune</p>
+                                        <p class="price">Starting from ₹1.8 Cr</p>
+                                        <p class="type">Villa Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-group">
+                        <!-- Next 3 properties -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../../img/home-7-resident(4).jpg" alt="Premium Apartment">
+                                <div class="project-title">Sky Towers</div>
+                                <div class="project-overlay">
+                                    <div class="project-details">
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Gurgaon</p>
+                                        <p class="price">Starting from ₹3.5 Cr</p>
+                                        <p class="type">4 & 5 BHK Premium Apartments</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1570701123784-2d41777f5e93?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lake View Homes">
+                                <div class="project-title">Lake Vista Residences</div>
+                                <div class="project-overlay">
+                                    <div class="project-details">
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Ahmedabad</p>
+                                        <p class="price">Starting from ₹1.5 Cr</p>
+                                        <p class="type">3 BHK Lake View Apartments</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="https://satyamevdevelopers.com/wp-content/uploads/2025/01/How-to-Increase-the-Value-of-Your-4-BHK-Luxurious-Apartments-in-Ahmedabad-1.webp" alt="Garden Homes">
+                                <div class="project-title">Garden Paradise</div>
+                                <div class="project-overlay">
+                                    <div class="project-details">
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Mumbai</p>
+                                        <p class="price">Starting from ₹2.8 Cr</p>
+                                        <p class="type">4 BHK Garden Homes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="slider-arrow next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <button class="see-all-btn" onclick="checkLogin(event)">See All Projects</button>
+        </div>
+    </section>
+
+    <section id="social-clubs" class="reveal reveal-up">
+        <h2 class="section-heading">Social Clubs & Amenities</h2>
+        <div class="amenities-grid">
+            <a href="club.html?id=CLUB1"  class="amenity-column" onclick="checkLogin(event)">
+                <div class="amenity-icon">
+                    <i class="fas fa-golf-ball"></i>
+                </div>
+                <h3>Golf Club</h3>
+                <p>Experience world-class golfing at our championship course</p>
+                <ul class="amenity-features">
+                    <li><i class="fas fa-check"></i>Professional 18-hole course</li>
+                    <li><i class="fas fa-check"></i>Golf academy</li>
+                    <li><i class="fas fa-check"></i>Premium equipment rental</li>
+                </ul>
+                <span class="learn-more">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </span>
+            </a>
+            <a href="club.html?id=CLUB2" class="amenity-column" onclick="checkLogin(event)">
+                <div class="amenity-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>Health Centre</h3>
+                <p>State-of-the-art fitness facilities for your well-being</p>
+                <ul class="amenity-features">
+                    <li><i class="fas fa-check"></i>Modern gym equipment</li>
+                    <li><i class="fas fa-check"></i>Personal training</li>
+                    <li><i class="fas fa-check"></i>Wellness programs</li>
+                </ul>
+                <span class="learn-more">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </span>
+            </a>
+            <a href="club.html?id=CLUB3" class="amenity-column" onclick="checkLogin(event)">
+                <div class="amenity-icon">
+                    <i class="fas fa-basketball-ball"></i>
+                </div>
+                <h3>Sports Centre</h3>
+                <p>Multiple sports facilities for an active lifestyle</p>
+                <ul class="amenity-features">
+                    <li><i class="fas fa-check"></i>Tennis courts</li>
+                    <li><i class="fas fa-check"></i>Swimming pool</li>
+                    <li><i class="fas fa-check"></i>Indoor sports arena</li>
+                </ul>
+                <span class="learn-more">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </span>
+            </a>
+            <a href="club.html?id=CLUB4" class="amenity-column" onclick="checkLogin(event)">
+                <div class="amenity-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Club House</h3>
+                <p>Exclusive social spaces for community gathering</p>
+                <ul class="amenity-features">
+                    <li><i class="fas fa-check"></i>Fine dining restaurant</li>
+                    <li><i class="fas fa-check"></i>Members lounge</li>
+                    <li><i class="fas fa-check"></i>Event spaces</li>
+                </ul>
+                <span class="learn-more">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </span>
+            </a>
+        </div>
+
+        <div class="club-background">
+            <video autoplay muted loop class="club-video">
+                <source src="https://streamable.com/jsu6bg" type="video/mp4">
+            </video>
+            <div style="position:relative; width:100%; height:200px; padding-bottom:56.250%"><iframe allow="fullscreen;autoplay" allowfullscreen height="100%" src="https://streamable.com/e/jsu6bg?autoplay=1&muted=1&nocontrols=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top: 0px; overflow:hidden;"></iframe></div>
+        </div>
+        <div class="club-content">
+            <div class="club-info">
+                <h3 class="club-name"></h3>
+                <p class="club-description"></p>
+                <ul class="club-features"></ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog-section" class="reveal reveal-up">
+        <div class="blog-container">
+            <div class="blog-content">
+                <h2>Why UrbanScale?</h2>
+                <div class="blog-text">
+                    <p class="highlight">Leading the way in luxury real estate for over two decades</p>
+                    <p>At UrbanScale, we believe in creating more than just homes - we craft lifestyles. Our commitment to excellence has made us the preferred choice for discerning homebuyers across India.</p>
+                    <ul class="blog-features">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>20+ Years of Excellence</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>100+ Premium Projects</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>50,000+ Happy Families</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Award-Winning Designs</span>
+                        </li>
+                    </ul>
+                    <button class="read-more-btn" onclick="checkLogin(event)">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="blog-image">
+                <img src="../../img/blog image.jpg" alt="UrbanScape Excellence">
+                <div class="blog-image-overlay">
+                    <h3>Buy Your Dream Home</h3>
+                    <p>Discover luxury properties that match your lifestyle</p>
+                    <button class="view-properties-btn" onclick="checkLogin(event)">
+                        View Properties <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta">
+        <div class="cta-content">
+            <h2>Ready to Find Your Perfect Home?</h2>
+            <p>Connect with our expert real estate agents today</p>
+            <button class="cta-button" onclick="checkLogin(event)">Contact Us</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>UrbanScale</h3>
+                <p>Your trusted partner in real estate</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: urbanscale.info@gmail.com </p>
+                <p>Phone: +91 9982399786</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Add modal HTML -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>Please Sign In First</h2>
+            <p>You need to sign in to access this feature.</p>
+            <button onclick="redirectToSignIn()">Sign In</button>
+        </div>
+    </div>
+
+    <script>
+        function checkLogin(event) {
+            event.preventDefault();
+            const isLoggedIn = false; // Replace with actual login check
+            if (!isLoggedIn) {
+                document.getElementById('loginModal').style.display = 'block';
+            } else {
+                window.location.href = event.target.closest('a, button').getAttribute('href');
+            }
+        }
+
+        function redirectToSignIn() {
+            window.location.href = 'signIn.html';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('loginModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+    <script src="../js/home.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

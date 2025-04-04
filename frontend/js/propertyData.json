@@ -1,0 +1,494 @@
+[
+    {
+        "Property ID":"PROP1",
+        "Type": "Villa",
+        "Bedrooms":3,
+        "Bathrooms":2,
+        "BHK":"3 BHK",
+        "Area (sq ft)":1000,
+        "Price (INR)":21741000.0,
+        "Description":"Experience luxury living in this stunning 3 BHK villa in the heart of Ahmedabad. This beautifully designed property features high ceilings, large windows offering abundant natural light, and premium Italian marble flooring throughout. The master bedroom includes a walk-in closet and an en-suite bathroom with premium fittings. The modern kitchen is equipped with built-in appliances and granite countertops. The living room opens to a spacious balcony with panoramic city views.",
+        "Latitude":23.0301518449,
+        "Longitude":72.5885139459,
+        "Address":"Bodakdev, Ahmedabad, Gujarat, India",
+        "Amenities":"Sports Facility, Swimming Pool, Security, Park",
+        "Image Link": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Details": {
+            "Construction Year": 2021,
+            "Furnishing": "Fully Furnished",
+            "Facing": "East",
+            "Plot Size": "2400 sq ft",
+            "Built-up Area": "1000 sq ft",
+            "Parking": "2 Covered",
+            "Garden Area": "800 sq ft",
+            "Maintenance": "₹5,000/month",
+            "Available From": "Immediate",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Modular Kitchen",
+                "Private Garden",
+                "Italian Marble Flooring",
+                "High-end Security System",
+                "Smart Home Features",
+                "Swimming Pool"
+            ],
+            "Nearby": {
+                "Schools": ["Delhi Public School (0.5 km)", "St. Xavier's High School (1.2 km)"],
+                "Hospitals": ["Apollo Hospital (1.5 km)", "Sterling Hospital (2 km)"],
+                "Shopping": ["Alpha Mall (0.8 km)", "Central Market (1 km)"],
+                "Transport": ["Metro Station (0.3 km)", "Bus Stand (0.5 km)"]
+            }
+        }
+    },
+    {
+        "Property ID":"PROP2",
+        "Type": "Penthouse",
+        "Bedrooms":3,
+        "Bathrooms":4,
+        "BHK":"3 BHK",
+        "Area (sq ft)":750,
+        "Price (INR)":3257000.0,
+        "Description":"Discover the epitome of luxury in this spectacular penthouse offering breathtaking city views. This 3 BHK penthouse spans across two floors with a private terrace garden. The double-height living room features floor-to-ceiling windows, flooding the space with natural light. The gourmet kitchen includes premium European appliances and a breakfast bar. Each bedroom has been thoughtfully designed with premium materials and smart home automation.",
+        "Latitude":23.0067354162,
+        "Longitude":72.5809885087,
+        "Address":"Prahlad Nagar, Ahmedabad, Gujarat, India",
+        "Amenities":"Security, Sports Facility, Clubhouse, Gym",
+        "Image Link":"https://english.mathrubhumi.com/image/contentid/policy:1.9741799:1721436275/1.jpg?$p=f73e629&f=16x10&w=852&q=0.8",
+        "Details": {
+            "Construction Year": 2022,
+            "Furnishing": "Semi-Furnished",
+            "Facing": "North-East",
+            "Built-up Area": "750 sq ft",
+            "Terrace Area": "500 sq ft",
+            "Parking": "3 Covered",
+            "Private Elevator": "Yes",
+            "Maintenance": "₹8,000/month",
+            "Available From": "January 2024",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Private Terrace Garden",
+                "360° City Views",
+                "Home Theater Room",
+                "Wine Cellar",
+                "Smart Home Automation",
+                "Private Elevator Access"
+            ],
+            "Nearby": {
+                "Schools": ["The International School (1 km)", "Ryan International (1.5 km)"],
+                "Hospitals": ["Fortis Hospital (2 km)", "Max Healthcare (2.5 km)"],
+                "Shopping": ["Infinity Mall (0.5 km)", "City Center (1.2 km)"],
+                "Transport": ["Metro Station (0.2 km)", "Railway Station (3 km)"]
+            }
+        }
+    },
+    {
+        "Property ID":"PROP3",
+        "Type": "Bungalow",
+        "Bedrooms":4,
+        "Bathrooms":1,
+        "BHK":"4 BHK",
+        "Area (sq ft)":2000,
+        "Price (INR)":5716000.0,
+        "Description":"Elegant 4 BHK bungalow nestled in the prime location of Baner, Pune. This masterfully crafted residence features a spacious living area with double-height ceilings, a designer kitchen with modern appliances, and a beautiful landscaped garden. The property includes a private swimming pool, outdoor entertainment area, and separate staff quarters. Perfect for families seeking luxury and comfort.",
+        "Latitude":18.5273784678,
+        "Longitude":73.8596193287,
+        "Address":"Baner, Pune, Maharashtra, India",
+        "Amenities":"Power Backup, Security, Children Play Area, Swimming Pool, Sports Facility",
+        "Image Link":"https://newprojects.99acres.com/projects/unknown/dosti_olive/images/euriw6k_1705647122_468148488.jpg",
+        "Details": {
+            "Construction Year": 2020,
+            "Furnishing": "Fully Furnished",
+            "Facing": "South-East",
+            "Plot Size": "3200 sq ft",
+            "Built-up Area": "2000 sq ft",
+            "Garden Area": "600 sq ft",
+            "Parking": "4 Covered",
+            "Maintenance": "₹12,000/month",
+            "Available From": "March 2024",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Private Swimming Pool",
+                "Landscaped Garden",
+                "Staff Quarters",
+                "Home Theater",
+                "Solar Panels",
+                "Rain Water Harvesting"
+            ],
+            "Nearby": {
+                "Schools": ["Symbiosis School (0.8 km)", "Delhi Public School (1.5 km)"],
+                "Hospitals": ["Ruby Hall Clinic (2 km)", "Jehangir Hospital (2.5 km)"],
+                "Shopping": ["Amanora Mall (1 km)", "Phoenix Market City (3 km)"],
+                "Transport": ["Pune Airport (8 km)", "Railway Station (5 km)"]
+            }
+        }
+    },
+    {
+        "Property ID":"PROP4",
+        "Type": "Villa",
+        "Bedrooms":4,
+        "Bathrooms":4,
+        "BHK":"4 BHK",
+        "Area (sq ft)":1750,
+        "Price (INR)":16465000.0,
+        "Description":"Luxurious 4 BHK villa in Vastrapur offering the perfect blend of comfort and sophistication. Features include a private garden, modern open-plan kitchen, and a sun-drenched terrace. The villa boasts premium finishes throughout, including imported marble flooring and designer light fixtures. The master suite includes a spa-like bathroom and walk-in closet.",
+        "Latitude":23.0249180126,
+        "Longitude":72.5514343387,
+        "Address":"Vastrapur, Ahmedabad, Gujarat, India",
+        "Amenities":"Gym, Children Play Area, Sports Facility, Lift, Park, Power Backup",
+        "Image Link":"https://content.jdmagicbox.com/comp/ahmedabad/q3/079pxx79.xx79.210913210714.z1q3/catalogue/shivalik-lakeview-2-ahmedabad-estate-agents-t6pm7u96wb.jpg",
+        "Details": {
+            "Construction Year": 2021,
+            "Furnishing": "Semi-Furnished",
+            "Facing": "North-East",
+            "Plot Size": "2800 sq ft",
+            "Built-up Area": "1750 sq ft",
+            "Garden Area": "400 sq ft",
+            "Parking": "3 Covered",
+            "Maintenance": "₹7,000/month",
+            "Available From": "Immediate",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Private Garden",
+                "Terrace Garden",
+                "Designer Kitchen",
+                "Home Automation",
+                "Premium Finishes",
+                "24x7 Security"
+            ],
+            "Nearby": {
+                "Schools": ["Nirma University (1 km)", "Gujarat University (2 km)"],
+                "Hospitals": ["CIMS Hospital (1.5 km)", "HCG Hospital (2 km)"],
+                "Shopping": ["Vastrapur Mall (0.5 km)", "AlphaOne Mall (2 km)"],
+                "Transport": ["Vastrapur Lake (1 km)", "BRTS Station (0.3 km)"]
+            }
+        }
+    },
+    {
+        "Property ID":"PROP5",
+        "Type": "Penthouse",
+        "Bedrooms":1,
+        "Bathrooms":3,
+        "BHK":"1 BHK",
+        "Area (sq ft)":1000,
+        "Price (INR)":19097000.0,
+        "Description": "Experience unmatched luxury in this stunning 1 BHK penthouse in Bandra West. Featuring floor-to-ceiling windows offering spectacular sea views, this exclusive residence includes a private terrace perfect for entertaining. The contemporary design incorporates high-end finishes, a state-of-the-art modular kitchen, and premium imported materials throughout. The master suite offers a resort-style bathroom and custom walk-in wardrobe.",
+        "Latitude":19.0639459436,
+        "Longitude":72.8765993971,
+        "Address":"Bandra West, Mumbai, Maharashtra, India",
+        "Amenities":"Clubhouse, Gym, Sports Facility, Security, Park",
+        "Image Link":"https://img-v2.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2Fm.sothebysrealty.com%2F1103i215%2Fqwf6hjwjm2hb42t2am57wx01v7i215&option=N&permitphotoenlargement=false",
+        "Details": {
+            "Construction Year": 2023,
+            "Furnishing": "Ultra Luxury Furnished",
+            "Facing": "Sea Facing",
+            "Built-up Area": "1000 sq ft",
+            "Terrace Area": "400 sq ft",
+            "Parking": "2 Covered",
+            "Private Elevator": "Yes",
+            "Maintenance": "₹15,000/month",
+            "Available From": "February 2024",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Sea View",
+                "Private Terrace",
+                "Smart Home System",
+                "Premium Imported Flooring",
+                "Designer Lighting",
+                "Concierge Service"
+            ],
+            "Nearby": {
+                "Schools": ["Jamnabai Narsee School (1 km)", "Arya Vidya Mandir (1.5 km)"],
+                "Hospitals": ["Lilavati Hospital (2 km)", "Hinduja Hospital (3 km)"],
+                "Shopping": ["Linking Road (0.5 km)", "Hill Road (1 km)"],
+                "Transport": ["Bandra Station (1 km)", "Sea Link (2 km)"]
+            }
+        }
+    },
+    {
+        "Property ID":"PROP6",
+        "Type": "Bungalow",
+        "Bedrooms":2,
+        "Bathrooms":3,
+        "BHK":"2 BHK",
+        "Area (sq ft)":2000,
+        "Price (INR)":3837000.0,
+        "Description": "Charming 2 BHK bungalow in the serene locality of Powai, perfect for modern family living. This well-designed property features a beautiful garden, covered parking, and a spacious terrace. The home includes contemporary amenities while maintaining a warm, traditional appeal. Custom woodwork throughout adds elegance to every room.",
+        "Latitude":19.0930561601,
+        "Longitude":72.8604213202,
+        "Address":"Powai, Mumbai, Maharashtra, India",
+        "Amenities":"Gym, Security, Sports Facility, Power Backup, Lift, Parking",
+        "Image Link":"https://q-xx.bstatic.com/xdata/images/hotel/max500/22933097.jpg?k=842953444c9f7f5cd628caacfb29f60db6aea4500d83433e8e463d2a2579fd2c&o=",
+        "Details": {
+            "Construction Year": 2019,
+            "Furnishing": "Semi-Furnished",
+            "Facing": "South",
+            "Plot Size": "3000 sq ft",
+            "Built-up Area": "2000 sq ft",
+            "Garden Area": "500 sq ft",
+            "Parking": "2 Covered",
+            "Maintenance": "₹8,000/month",
+            "Available From": "Immediate",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Landscaped Garden",
+                "Servant Quarter",
+                "Modern Kitchen",
+                "Wooden Flooring",
+                "Security System",
+                "Water Softener"
+            ],
+            "Nearby": {
+                "Schools": ["Hiranandani School (0.8 km)", "DPS Powai (1.2 km)"],
+                "Hospitals": ["Hiranandani Hospital (1 km)", "Powai Hospital (1.5 km)"],
+                "Shopping": ["D-Mart (0.5 km)", "Galleria Mall (2 km)"],
+                "Transport": ["Metro Station (1 km)", "Eastern Express Highway (2 km)"]
+            }
+        }
+    },
+    {
+        "Property ID":"PROP7",
+        "Type": "Villa",
+        "Bedrooms":5,
+        "Bathrooms":3,
+        "BHK":"5 BHK",
+        "Area (sq ft)":2000,
+        "Price (INR)":40418000.0,
+        "Description": "Magnificent 5 BHK villa in the prestigious Golf Course Road area. This architectural masterpiece features double-height ceilings, a grand entrance foyer, and expansive living spaces. The property includes a private infinity pool, landscaped gardens, and a dedicated home office. The gourmet kitchen features top-of-the-line appliances and a butler's pantry.",
+        "Latitude":28.4507377974,
+        "Longitude":77.0256534198,
+        "Address":"Golf Course Road, Gurgaon, Haryana, India",
+        "Amenities":"Power Backup, Clubhouse, Swimming Pool",
+        "Image Link":"https://goodhomes.wwmindia.com/content/2022/feb/luxury-interiors-11644071420.jpg",
+        "Details": {
+            "Construction Year": 2022,
+            "Furnishing": "Ultra Luxury Furnished",
+            "Facing": "North-West",
+            "Plot Size": "4000 sq ft",
+            "Built-up Area": "2000 sq ft",
+            "Garden Area": "1000 sq ft",
+            "Parking": "4 Covered",
+            "Maintenance": "₹25,000/month",
+            "Available From": "March 2024",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Infinity Pool",
+                "Home Theater",
+                "Wine Cellar",
+                "Smart Home System",
+                "Golf Course View",
+                "Personal Gym"
+            ],
+            "Nearby": {
+                "Schools": ["DPS International (1 km)", "Heritage School (2 km)"],
+                "Hospitals": ["Medanta Hospital (3 km)", "Artemis Hospital (4 km)"],
+                "Shopping": ["DLF Galleria (0.5 km)", "Ambience Mall (2 km)"],
+                "Transport": ["Rapid Metro Station (1 km)", "NH-8 Highway (3 km)"]
+            }
+        }
+    },
+    {
+        "Property ID":"PROP8",
+        "Type": "Penthouse",
+        "Bedrooms":4,
+        "Bathrooms":2,
+        "BHK":"4 BHK",
+        "Area (sq ft)":1000,
+        "Price (INR)":24483000.0,
+        "Description": "Luxurious duplex penthouse offering panoramic city views of Ahmedabad. Features a private rooftop garden, entertainment deck, and infinity pool. The interiors showcase contemporary design with premium finishes, including Italian marble flooring and designer lighting. Includes a state-of-the-art home automation system.",
+        "Latitude":23.0139900902,
+        "Longitude":72.5793010638,
+        "Address":"Vastrapur, Ahmedabad, Gujarat, India",
+        "Amenities":"Lift, Clubhouse, Sports Facility, Parking, Gym",
+        "Image Link":"https://content.jdmagicbox.com/comp/ahmedabad/q3/079pxx79.xx79.210913210714.z1q3/catalogue/shivalik-lakeview-2-ahmedabad-estate-agents-ujnywhg4xu.jpg",
+        "Details": {
+            "Construction Year": 2023,
+            "Furnishing": "Fully Furnished",
+            "Facing": "South-East",
+            "Built-up Area": "1000 sq ft",
+            "Terrace Area": "600 sq ft",
+            "Parking": "2 Covered",
+            "Private Elevator": "Yes",
+            "Maintenance": "₹18,000/month",
+            "Available From": "Immediate",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Rooftop Pool",
+                "Private Terrace Garden",
+                "BBQ Area",
+                "Smart Home Features",
+                "360° City View",
+                "Premium Security"
+            ],
+            "Nearby": {
+                "Schools": ["Udgam School (1 km)", "HB Kapadia School (1.5 km)"],
+                "Hospitals": ["Zydus Hospital (2 km)", "SAL Hospital (3 km)"],
+                "Shopping": ["Vastrapur Lake Mall (0.5 km)", "Himalaya Mall (2 km)"],
+                "Transport": ["IIM Bus Stop (0.2 km)", "Vastrapur Metro (1 km)"]
+            }
+        }
+    },
+    {
+        "Property ID":"PROP9",
+        "Type": "Bungalow",
+        "Bedrooms":4,
+        "Bathrooms":1,
+        "BHK":"4 BHK",
+        "Area (sq ft)":1750,
+        "Price (INR)":4756000.0,
+        "Description": "Exquisite 4 BHK bungalow in the tech hub of Hinjewadi, Pune. This contemporary residence offers a perfect blend of luxury and functionality with its sleek design and modern amenities. Features include a landscaped garden, home office space, and an entertainment zone. The property boasts sustainable features including solar panels and rainwater harvesting.",
+        "Latitude":18.5006813187,
+        "Longitude":73.8477393693,
+        "Address":"Hinjewadi, Pune, Maharashtra, India",
+        "Amenities":"Clubhouse, Park, Children Play Area",
+        "Image Link":"https://liferepublicin.wordpress.com/wp-content/uploads/2013/03/ac553-twin_bungalows5.jpg",
+        "Details": {
+            "Construction Year": 2021,
+            "Furnishing": "Semi-Furnished",
+            "Facing": "North",
+            "Plot Size": "2500 sq ft",
+            "Built-up Area": "1750 sq ft",
+            "Garden Area": "450 sq ft",
+            "Parking": "3 Covered",
+            "Maintenance": "₹10,000/month",
+            "Available From": "April 2024",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Home Office Setup",
+                "Entertainment Zone",
+                "Solar Panels",
+                "Rainwater Harvesting",
+                "Organic Garden",
+                "CCTV Surveillance"
+            ],
+            "Nearby": {
+                "Schools": ["Blue Ridge School (1 km)", "Mercedes Benz International (2 km)"],
+                "Hospitals": ["Life Point Hospital (1.5 km)", "Columbia Asia (3 km)"],
+                "Shopping": ["Xion Mall (1 km)", "Westend Mall (2.5 km)"],
+                "Transport": ["Hinjewadi Phase 3 (0.5 km)", "Mumbai-Pune Express Highway (3 km)"]
+            }
+        }
+    },
+    {
+        "Property ID":"PROP10",
+        "Type": "Villa",
+        "Bedrooms":3,
+        "Bathrooms":1,
+        "BHK":"3 BHK",
+        "Area (sq ft)":2500,
+        "Price (INR)":44105000.0,
+        "Description": "Premium 3 BHK villa on Sohna Road offering the perfect combination of luxury and comfort. This modern villa features a private swimming pool, landscaped garden, and a dedicated entertainment area. The property includes high-end finishes, imported fixtures, and smart home automation throughout.",
+        "Latitude":28.456601804,
+        "Longitude":77.0311572684,
+        "Address":"Sohna Road, Gurgaon, Haryana, India",
+        "Amenities":"Gym, Power Backup, Parking, Security",
+        "Image Link":"https://whitecollarrealty.com/admin/assets/residential_property/anantraj-estate-luxury-estate-villas/20210518034757_slider_image_1_home-banner2.jpg",
+        "Details": {
+            "Construction Year": 2022,
+            "Furnishing": "Luxury Furnished",
+            "Facing": "South-West",
+            "Plot Size": "3500 sq ft",
+            "Built-up Area": "2500 sq ft",
+            "Garden Area": "700 sq ft",
+            "Parking": "4 Covered",
+            "Maintenance": "₹20,000/month",
+            "Available From": "Immediate",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Private Pool",
+                "Smart Home System",
+                "Home Theater",
+                "Modular Kitchen",
+                "Servant Quarter",
+                "Party Lawn"
+            ],
+            "Nearby": {
+                "Schools": ["GD Goenka (1 km)", "Pathways School (2.5 km)"],
+                "Hospitals": ["Park Hospital (2 km)", "W Pratiksha Hospital (3 km)"],
+                "Shopping": ["Central Plaza (1 km)", "Good Earth City Centre (2 km)"],
+                "Transport": ["Rapid Metro Station (2 km)", "Sohna Road Junction (1 km)"]
+            }
+        }
+    },
+    {
+        "Property ID":"PROP11",
+        "Type": "Penthouse",
+        "Bedrooms":2,
+        "Bathrooms":4,
+        "BHK":"2 BHK",
+        "Area (sq ft)":1250,
+        "Price (INR)":10405000.0,
+        "Description": "Luxurious 2 BHK penthouse in Lower Parel offering stunning views of the Mumbai skyline. This contemporary residence features double-height ceilings, floor-to-ceiling windows, and a private sky garden. The modern interiors include Italian marble flooring, designer fittings, and premium appliances.",
+        "Latitude":19.0802585841,
+        "Longitude":72.8958157318,
+        "Address":"Lower Parel, Mumbai, Maharashtra, India",
+        "Amenities":"Gym, Power Backup, Clubhouse, Park, Lift, Security",
+        "Image Link":"https://images.jdmagicbox.com/v2/comp/mumbai/j4/022pxx22.xx22.170711200854.c5j4/catalogue/mahavir-real-estate-virar-west-palghar-estate-agents-tz943a9tyc.jpg",
+        "Details": {
+            "Construction Year": 2023,
+            "Furnishing": "Ultra Luxury Furnished",
+            "Facing": "West",
+            "Built-up Area": "1250 sq ft",
+            "Terrace Area": "400 sq ft",
+            "Parking": "2 Covered",
+            "Private Elevator": "Yes",
+            "Maintenance": "₹22,000/month",
+            "Available From": "March 2024",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Sky Garden",
+                "Private Jacuzzi",
+                "Wine Cellar",
+                "Designer Kitchen",
+                "City View",
+                "VRV Air Conditioning"
+            ],
+            "Nearby": {
+                "Schools": ["Podar International (1.5 km)", "BD Somani School (2 km)"],
+                "Hospitals": ["Wockhardt Hospital (1 km)", "Global Hospital (2 km)"],
+                "Shopping": ["Phoenix Mall (0.5 km)", "High Street Phoenix (1 km)"],
+                "Transport": ["Lower Parel Station (0.3 km)", "Monorail Station (1 km)"]
+            }
+        }
+    },
+    {
+        "Property ID":"PROP12",
+        "Type": "Bungalow",
+        "Bedrooms":5,
+        "Bathrooms":4,
+        "BHK":"5 BHK",
+        "Area (sq ft)":500,
+        "Price (INR)":32660000.0,
+        "Description": "Grand 5 BHK bungalow on SG Highway featuring contemporary architecture and luxurious amenities. This sprawling property includes a private pool, meditation garden, and outdoor entertainment area. The interiors showcase premium finishes with imported materials and smart home features throughout.",
+        "Latitude":23.0266572122,
+        "Longitude":72.5772212674,
+        "Address":"SG Highway, Ahmedabad, Gujarat, India",
+        "Amenities":"Swimming Pool, Gym, Sports Facility, Clubhouse, Security, Lift",
+        "Image Link":"https://cloudimage.homeonline.com/640x360/public/uploads/project/images/elevation/mobile/lightbox/a60d2327eae0b5d2a2db09d24e6fea30.jpg",
+        "Details": {
+            "Construction Year": 2023,
+            "Furnishing": "Fully Furnished",
+            "Facing": "East",
+            "Plot Size": "1200 sq ft",
+            "Built-up Area": "500 sq ft",
+            "Garden Area": "300 sq ft",
+            "Parking": "5 Covered",
+            "Maintenance": "₹30,000/month",
+            "Available From": "May 2024",
+            "Ownership Type": "Freehold",
+            "Additional Features": [
+                "Private Pool",
+                "Meditation Garden",
+                "Home Theater",
+                "Smart Home",
+                "Terrace Garden",
+                "Guest House"
+            ],
+            "Nearby": {
+                "Schools": ["Divine Child School (0.5 km)", "DPS International (2 km)"],
+                "Hospitals": ["Care Institute (1 km)", "Krishna Hospital (1.5 km)"],
+                "Shopping": ["Iscon Mall (1 km)", "Ahmedabad One Mall (2 km)"],
+                "Transport": ["BRTS Station (0.2 km)", "Airport (8 km)"]
+            }
+        }
+    }
+]

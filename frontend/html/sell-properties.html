@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Properties</title>
+    <link rel="stylesheet" href="../css/properties.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/sell-properties.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo-container">
+                <div class="logo">UrbanScale</div>
+            </div>
+            <div class="nav-links">
+                <a href="home3.html">Home</a>
+                <a href="#" id="propertiesLink" class="active">Sell Properties</a>
+                <a href="seller-residential.html">Residentials</a>
+                <a href="home3.html#social-clubs">Clubs</a>
+                <a href="seller-contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='seller-profile.html'" class="profile-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+
+                <button onclick="window.location.href='seller-chat.html'" class="message-btn">
+                    <i class="fas fa-message"></i>
+                </button>
+                <!-- <button onclick="showLogoutModal()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button> -->
+            </div>
+        </nav>
+
+        <!-- Add overlay div after nav -->
+        <div class="menu-overlay"></div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="home.html"><i class="fas fa-home"></i>Home</a>
+                <a href="properties.html"><i class="fas fa-building"></i>Properties</a>
+                <a href="residential.html"><i class="fas fa-city"></i>Residentials</a>
+                <a href="home.html#social-clubs"><i class="fas fa-users"></i>Clubs</a>
+                <a href="#ask-ai"><i class="fas fa-robot"></i>Ask AI</a>
+                <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
+            </div>
+            <div class="mobile-auth-buttons">
+                <button class="mobile-sign-in">Sign In</button>
+                <button class="mobile-sign-up">Sign Up</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="add-property-container">
+        <button id="addPropertyBtn" class="add-property-btn">
+            <i class="fas fa-plus"></i>
+            Add New Property
+        </button>
+    </div>
+
+    <!-- Add Property Modal -->
+    <div id="propertyModal" class="property-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitle">Add New Property</h2> <!-- Dynamic title -->
+            <form id="propertyForm" autocomplete="off">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="propertyType">Property Type</label>
+                        <select id="propertyType" name="propertyType" required autocomplete="off">
+                            <option value="">Select Type</option>
+                            <option value="Villa">Villa</option>
+                            <option value="Penthouse">Penthouse</option>
+                            <option value="Bungalow">Bungalow</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bhk">BHK</label>
+                        <select id="bhk" required>
+                            <option value="">Select BHK</option>
+                            <option value="1 BHK">1 BHK</option>
+                            <option value="2 BHK">2 BHK</option>
+                            <option value="3 BHK">3 BHK</option>
+                            <option value="4 BHK">4 BHK</option>
+                            <option value="5 BHK">5 BHK</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bedrooms">Bedrooms</label>
+                        <input type="number" id="bedrooms" required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="bathrooms">Bathrooms</label>
+                        <input type="number" id="bathrooms" required min="1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="area">Area (sq ft)</label>
+                        <input type="number" id="area" required min="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price (INR)</label>
+                        <input type="number" id="price" required min="1000">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="description">Description</label>
+                    <textarea id="description" required rows="4"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" required>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="amenities">Amenities</label>
+                    <div class="amenities-container">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Gym"> Gym
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Swimming Pool"> Swimming Pool
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Security"> Security
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Park"> Park
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Power Backup"> Power Backup
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Clubhouse"> Clubhouse
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="imageLink">Image Link</label>
+                    <input type="url" id="imageLink" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn" id="submitBtn">Add Property</button> <!-- Dynamic button text -->
+                    <button type="button" class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Property Container -->
+    <div id="my-properties" class="properties-container">
+        <!-- Properties will be loaded here -->
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="success-modal">
+        <div class="success-modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Success!</h2>
+            <p id="successMessage">Your property has been successfully added.</p>
+            <button id="successOkBtn" class="success-ok-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="delete-modal">
+        <div class="delete-modal-content">
+            <div class="delete-icon-large">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <h2>Delete Property</h2>
+            <p>Are you sure you want to delete this property?</p>
+            <div class="delete-modal-actions">
+                <button id="confirmDelete" class="confirm-delete-btn">Yes, Delete</button>
+                <button id="cancelDelete" class="cancel-delete-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/sell-properties.js"></script>
+</body>
+</html>

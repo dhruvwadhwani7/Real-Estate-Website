@@ -1,0 +1,418 @@
+[
+    {
+        "Club ID": "CLUB1",
+        "Name": "Golf Club",
+        "Type": "Sports & Recreation",
+        "Icon": "golf-ball",
+        "Description": "Experience world-class golfing at our championship course",
+        "Features": [
+            "Professional 18-hole course",
+            "Golf academy",
+            "Premium equipment rental"
+        ],
+        "Image": {
+            "Main": "https://www.golfshire.com/assets/img/pgc/pgc-abt.jpg",
+            "Gallery": [
+                "https://preossdev.s3.ap-south-1.amazonaws.com/projectgallery/f8ab0ca1-e20a-4c4a-acf6-e9de22bcdc5c.webp",
+                "https://images.unsplash.com/photo-1632946269126-0f8edbe8b068?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z29sZiUyMGNvdXJzZXxlbnwwfHwwfHx8MA%3D%3D",
+                "https://plus.unsplash.com/premium_photo-1683121365549-b34ad459b71a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            ],
+            "Thumbnail": "../img/clubs/golf-thumb.jpg"
+        },
+        "Details": {
+            "Operating Hours": "6:00 AM - 8:00 PM",
+            "Membership Types": [
+                "Individual",
+                "Family",
+                "Corporate"
+            ],
+            "Facilities": {
+                "Main Course": "18-hole championship course",
+                "Practice Area": "Driving range & putting greens",
+                "Club House": "Premium lounge & restaurant",
+                "Pro Shop": "Equipment & accessories"
+            },
+            "Services": [
+                "Professional coaching",
+                "Equipment rental",
+                "Tournament hosting",
+                "Corporate events"
+            ],
+            "Additional Amenities": [
+                "Locker rooms",
+                "Club storage",
+                "Golf cart service",
+                "Valet parking"
+            ],
+            "PricingPlans": [
+                {
+                    "name": "Standard",
+                    "price": "₹25,000/year",
+                    "features": [
+                        "Basic course access",
+                        "Equipment rental",
+                        "Weekday access"
+                    ]
+                },
+                {
+                    "name": "Premium",
+                    "price": "₹45,000/year",
+                    "features": [
+                        "Full course access",
+                        "Premium equipment",
+                        "Weekend access",
+                        "Locker facility"
+                    ]
+                }
+            ],
+            "Events": [
+                {
+                    "name": "Annual Golf Championship",
+                    "date": "Every December",
+                    "description": "Premium tournament with cash prizes"
+                },
+                {
+                    "name": "Weekend Golf Clinic",
+                    "date": "Every Saturday",
+                    "description": "Professional training sessions"
+                }
+            ],
+            "SpecialFeatures": [
+                {
+                    "name": "Golf Academy",
+                    "description": "Professional training program for all levels",
+                    "icon": "graduation-cap"
+                },
+                {
+                    "name": "Pro Shop",
+                    "description": "Latest equipment and accessories",
+                    "icon": "shopping-cart"
+                }
+            ],
+            "LocationDetails": {
+                "address": "123 Golf Course Road, Bangalore",
+                "coordinates": {
+                    "lat": 12.9716,
+                    "lng": 77.5946
+                },
+                "nearbyLandmarks": [
+                    "Central Mall",
+                    "City Hospital",
+                    "Metro Station"
+                ]
+            }
+        }
+    },
+    {
+        "Club ID": "CLUB2",
+        "Name": "Health Centre",
+        "Type": "Fitness & Wellness",
+        "Icon": "dumbbell",
+        "Description": "State-of-the-art fitness facilities for your well-being",
+        "Features": [
+            "Modern gym equipment",
+            "Personal training",
+            "Wellness programs"
+        ],
+        "Image": {
+            "Main": "https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg",
+            "Gallery": [
+                "https://plus.unsplash.com/premium_photo-1681843039768-0e22b7a031d5?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1519494080410-f9aa76cb4283?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1579126038374-6064e9370f0f?q=80&w=2031&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            ],
+            "Thumbnail": "../img/clubs/health-thumb.jpg"
+        },
+        "Details": {
+            "Operating Hours": "5:00 AM - 11:00 PM",
+            "Membership Types": [
+                "Basic",
+                "Premium",
+                "Family"
+            ],
+            "Facilities": {
+                "Gym Area": "Multi-station equipment zones",
+                "Cardio Section": "Latest cardio machines",
+                "Studios": "Yoga, aerobics & spinning",
+                "Assessment Room": "Fitness evaluation center"
+            },
+            "Services": [
+                "Personal training",
+                "Nutrition counseling",
+                "Group classes",
+                "Health assessment"
+            ],
+            "Additional Amenities": [
+                "Steam & sauna",
+                "Juice bar",
+                "Locker rooms",
+                "Towel service"
+            ],
+            "PricingPlans": [
+                {
+                    "name": "Standard",
+                    "price": "₹15,000/year",
+                    "features": [
+                        "Gym access",
+                        "Group classes",
+                        "Weekday access"
+                    ]
+                },
+                {
+                    "name": "Premium",
+                    "price": "₹30,000/year",
+                    "features": [
+                        "Full access",
+                        "Personal training",
+                        "Weekend access",
+                        "Locker facility"
+                    ]
+                }
+            ],
+            "Events": [
+                {
+                    "name": "Annual Fitness Challenge",
+                    "date": "Every January",
+                    "description": "Fitness competition with prizes"
+                },
+                {
+                    "name": "Monthly Wellness Workshop",
+                    "date": "First Saturday of every month",
+                    "description": "Workshops on various wellness topics"
+                }
+            ],
+            "SpecialFeatures": [
+                {
+                    "name": "Nutrition Counseling",
+                    "description": "Personalized diet plans",
+                    "icon": "apple-alt"
+                },
+                {
+                    "name": "Personal Training",
+                    "description": "One-on-one training sessions",
+                    "icon": "user"
+                }
+            ],
+            "LocationDetails": {
+                "address": "456 Health Avenue, Bangalore",
+                "coordinates": {
+                    "lat": 12.9718,
+                    "lng": 77.5948
+                },
+                "nearbyLandmarks": [
+                    "Health Mall",
+                    "City Clinic",
+                    "Bus Station"
+                ]
+            }
+        }
+    },
+    {
+        "Club ID": "CLUB3",
+        "Name": "Sports Centre",
+        "Type": "Multi-Sport Complex",
+        "Icon": "basketball-ball",
+        "Description": "Multiple sports facilities for an active lifestyle",
+        "Features": [
+            "Tennis courts",
+            "Swimming pool",
+            "Indoor sports arena"
+        ],
+        "Image": {
+            "Main": "https://www.indiansuperleague.com/static-assets/images/club/venue/506.png?v=102.55",
+            "Gallery": [
+                "https://content.jdmagicbox.com/v2/comp/bangalore/40/080pclr20090403iro394301240/catalogue/srujan-sport-india-pvt-ltd-bannerghatta-road-bangalore-swimming-pools-7gw2kuo7bt.jpg",
+                "https://content.jdmagicbox.com/v2/comp/bangalore/a2/080pxx80.xx80.170930112005.t7a2/catalogue/spark-sports-jp-nagar-8th-phase-bangalore-summer-camps-3v2okc4.jpg",
+                "https://thebridge.in/wp-content/uploads/2020/10/Best-Tennis-Venues-in-India.jpg"
+            ],
+            "Thumbnail": "../img/clubs/sports-thumb.jpg"
+        },
+        "Details": {
+            "Operating Hours": "6:00 AM - 10:00 PM",
+            "Membership Types": [
+                "Sport-specific",
+                "All-access",
+                "Family"
+            ],
+            "Facilities": {
+                "Courts": "Tennis, badminton & squash",
+                "Pool": "Olympic-size swimming pool",
+                "Indoor Arena": "Basketball & volleyball courts",
+                "Training Areas": "Multi-purpose zones"
+            },
+            "Services": [
+                "Sports coaching",
+                "Equipment rental",
+                "Tournament hosting",
+                "Swimming lessons"
+            ],
+            "Additional Amenities": [
+                "Changing rooms",
+                "Equipment shop",
+                "First aid station",
+                "Spectator areas"
+            ],
+            "PricingPlans": [
+                {
+                    "name": "Standard",
+                    "price": "₹20,000/year",
+                    "features": [
+                        "Basic access",
+                        "Equipment rental",
+                        "Weekday access"
+                    ]
+                },
+                {
+                    "name": "Premium",
+                    "price": "₹35,000/year",
+                    "features": [
+                        "Full access",
+                        "Premium equipment",
+                        "Weekend access",
+                        "Locker facility"
+                    ]
+                }
+            ],
+            "Events": [
+                {
+                    "name": "Annual Sports Meet",
+                    "date": "Every November",
+                    "description": "Multi-sport competition with prizes"
+                },
+                {
+                    "name": "Monthly Sports Clinic",
+                    "date": "First Sunday of every month",
+                    "description": "Training sessions for various sports"
+                }
+            ],
+            "SpecialFeatures": [
+                {
+                    "name": "Sports Academy",
+                    "description": "Professional training for various sports",
+                    "icon": "graduation-cap"
+                },
+                {
+                    "name": "Equipment Shop",
+                    "description": "Latest sports equipment and accessories",
+                    "icon": "shopping-cart"
+                }
+            ],
+            "LocationDetails": {
+                "address": "789 Sports Lane, Bangalore",
+                "coordinates": {
+                    "lat": 12.9720,
+                    "lng": 77.5950
+                },
+                "nearbyLandmarks": [
+                    "Sports Mall",
+                    "City Stadium",
+                    "Train Station"
+                ]
+            }
+        }
+    },
+    {
+        "Club ID": "CLUB4",
+        "Name": "Club House",
+        "Type": "Social & Dining",
+        "Icon": "utensils",
+        "Description": "Exclusive social spaces for community gathering",
+        "Features": [
+            "Fine dining restaurant",
+            "Members lounge",
+            "Event spaces"
+        ],
+        "Image": {
+            "Main": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "Gallery": [
+                "https://images.unsplash.com/photo-1508606151523-7b548b64ba78?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1480455454781-1af590be2a58?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://www.bartonmcgill.co.nz/wp-content/uploads/2022/05/image003.jpg"
+            ],
+            "Thumbnail": "../img/clubs/clubhouse-thumb.jpg"
+        },
+        "Details": {
+            "Operating Hours": "7:00 AM - 12:00 AM",
+            "Membership Types": [
+                "Social",
+                "Dining",
+                "Corporate"
+            ],
+            "Facilities": {
+                "Restaurant": "Fine dining & casual cafe",
+                "Lounges": "Members only areas",
+                "Event Spaces": "Banquet halls & meeting rooms",
+                "Bar": "Premium spirits & wines"
+            },
+            "Services": [
+                "Private events",
+                "Catering",
+                "Concierge services",
+                "Business center"
+            ],
+            "Additional Amenities": [
+                "Private dining rooms",
+                "Outdoor terrace",
+                "Kids' play area",
+                "Valet parking"
+            ],
+            "PricingPlans": [
+                {
+                    "name": "Standard",
+                    "price": "₹10,000/year",
+                    "features": [
+                        "Basic access",
+                        "Event spaces",
+                        "Weekday access"
+                    ]
+                },
+                {
+                    "name": "Premium",
+                    "price": "₹20,000/year",
+                    "features": [
+                        "Full access",
+                        "Premium dining",
+                        "Weekend access",
+                        "Private events"
+                    ]
+                }
+            ],
+            "Events": [
+                {
+                    "name": "Annual Gala Dinner",
+                    "date": "Every December",
+                    "description": "Exclusive dinner event with entertainment"
+                },
+                {
+                    "name": "Monthly Networking Event",
+                    "date": "First Friday of every month",
+                    "description": "Networking opportunities for members"
+                }
+            ],
+            "SpecialFeatures": [
+                {
+                    "name": "Fine Dining",
+                    "description": "Gourmet meals prepared by top chefs",
+                    "icon": "utensils"
+                },
+                {
+                    "name": "Members Lounge",
+                    "description": "Exclusive lounge for members",
+                    "icon": "couch"
+                }
+            ],
+            "LocationDetails": {
+                "address": "101 Club House Road, Bangalore",
+                "coordinates": {
+                    "lat": 12.9722,
+                    "lng": 77.5952
+                },
+                "nearbyLandmarks": [
+                    "Club Mall",
+                    "City Park",
+                    "Airport"
+                ]
+            }
+        }
+    }
+]

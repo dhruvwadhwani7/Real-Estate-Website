@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Details - UrbanScale</title>
+    <link rel="stylesheet" href="../css/club.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <!-- Replace existing header with this navigation -->
+    <header>
+        <nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo-container">
+                <div class="logo">UrbanScale</div>
+            </div>
+            <div class="nav-links">
+                <a href="home2.html">Home</a>
+                <a href="properties.html">Properties</a>
+                <a href="residential.html">Residentials</a>
+                <a href="#" class="active">Clubs</a>
+                <a href="new-added-props.html">Newly Added Properties</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <!-- <button onclick="window.location.href='wishlist.html'" class="wishlist-btn">
+                    <i class="fas fa-heart"></i>
+                </button> -->
+                <button onclick="window.location.href='profile.html'" class="profile-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button onclick="window.location.href='buyer-chat.html'" class="message-btn">
+                    <i class="fas fa-message"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div class="menu-overlay"></div>
+
+        <div class="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="home.html"><i class="fas fa-home"></i>Home</a>
+                <a href="properties.html"><i class="fas fa-building"></i>Properties</a>
+                <a href="residential.html"><i class="fas fa-city"></i>Residentials</a>
+                <a href="#" class="active"><i class="fas fa-users"></i>Clubs</a>
+                <a href="#ask-ai"><i class="fas fa-robot"></i>Ask AI</a>
+                <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
+            </div>
+            <div class="mobile-auth-buttons">
+                <button class="mobile-sign-in">Sign In</button>
+                <button class="mobile-sign-up">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="club-details-container">
+        <!-- Club Banner Section -->
+        <section class="club-banner">
+            <div class="image-gallery">
+                <img src="" alt="Club Main View" id="mainImage">
+                <button class="gallery-nav prev" onclick="prevImage()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-nav next" onclick="nextImage()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <!-- Add thumbnail gallery -->
+            <div class="thumbnail-gallery">
+                <div class="thumbnail-container" id="thumbnailContainer">
+                    <!-- Thumbnails will be populated by JavaScript -->
+                </div>
+            </div>
+            <!-- Add new gallery button -->
+            <button class="view-all-images" onclick="openGalleryModal()">
+                See All Images <i class="fas fa-images"></i>
+            </button>
+
+            <!-- Add modal for full gallery -->
+            <div id="galleryModal" class="gallery-modal">
+                <span class="close-modal" onclick="closeGalleryModal()">&times;</span>
+                <div class="gallery-grid" id="fullGalleryGrid">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Add fullscreen image modal -->
+            <div id="imageModal" class="image-modal">
+                <span class="close-modal" onclick="closeImageModal()">&times;</span>
+                <img id="modalImage" src="" alt="Full size image">
+            </div>
+            <div class="gallery-thumbnails-row" id="galleryThumbnailsRow">
+                <!-- Will be populated by JavaScript -->
+            </div>
+            <!-- Add Email Modal -->
+            <div id="emailModal" class="email-modal">
+                <div class="email-modal-content">
+                    <span class="close-email-modal">&times;</span>
+                    <h2>Share Club via Email</h2>
+                    <form id="emailForm">
+                        <div class="form-group">
+                            <label for="senderName">Your Name:</label>
+                            <input type="text" id="senderName" name="senderName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senderEmail">Your Email:</label>
+                            <input type="email" id="senderEmail" name="senderEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clubSelect">Select Club:</label>
+                            <select id="clubSelect" name="clubSelect" required>
+                                <!-- Will be populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Message (optional):</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="send-email-btn">Send Email</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Add Loading Spinner -->
+            <div id="loadingSpinner" class="loading-spinner-overlay">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Sending mail...</p>
+                </div>
+            </div>
+
+            <!-- Add Success Modal -->
+            <div id="successModal" class="success-modal">
+                <div class="success-modal-content">
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <h2>Success!</h2>
+                    <p>Your email has been sent successfully.</p>
+                    <button class="ok-btn">OK</button>
+                </div>
+            </div>
+            <div class="banner-overlay">
+                <div class="club-type-badge" id="clubType"></div>
+                <h1 id="clubName"></h1>
+                <div class="club-status">
+                    <i class="fas fa-clock"></i>
+                    <span id="operatingHours"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Club Description -->
+                <section class="description-section">
+                    <p id="clubDescription"></p>
+                </section>
+
+                <!-- Facilities Section -->
+                <section class="facilities-section">
+                    <h2>Club Facilities</h2>
+                    <div class="facilities-grid" id="facilitiesGrid"></div>
+                </section>
+
+                <!-- Services Section -->
+                <section class="services-section">
+                    <h2>Services</h2>
+                    <div class="services-grid" id="servicesGrid"></div>
+                </section>
+
+                <!-- Additional Amenities -->
+                <section class="amenities-section">
+                    <h2>Additional Amenities</h2>
+                    <div class="amenities-grid" id="amenitiesGrid"></div>
+                </section>
+
+                <!-- Membership Types -->
+                <section class="membership-section">
+                    <h2>Membership Options</h2>
+                    <div class="membership-types" id="membershipTypes"></div>
+                </section>
+
+                <!-- Pricing Plans Section -->
+                <section class="pricing-section">
+                    <h2>Membership Plans</h2>
+                    <div class="pricing-grid" id="pricingGrid"></div>
+                </section>
+
+                <!-- Events Section -->
+                <section class="events-section">
+                    <h2>Upcoming Events</h2>
+                    <div class="events-grid" id="eventsGrid"></div>
+                </section>
+
+                <!-- Special Features Section -->
+                <section class="special-features-section">
+                    <h2>Special Features</h2>
+                    <div class="special-features-grid" id="specialFeaturesGrid"></div>
+                </section>
+
+                <!-- Add Other Clubs Section here -->
+                <section class="other-clubs-section">
+                    <h2>Explore Other Clubs</h2>
+                    <div class="other-clubs-container">
+                        <div id="clubNavLinks" class="clubs-horizontal-scroll">
+                            <!-- Club cards will be populated by JavaScript -->
+                        </div>
+                        <button class="scroll-btn prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="scroll-btn next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- UrbanScale Clubs Blog Section -->
+                <div class="blog-section">
+                    <h3>UrbanScale Club Insights</h3>
+                    <div class="blog-content">
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW8UQQZiT0lP4k-plnkEbQLQuTHqlEbf0uow&s" alt="Luxury Club Lifestyle">
+                            </div>
+                            <h4>Experience Luxury Living</h4>
+                            <p>Discover the epitome of luxury living with UrbanScale's exclusive club memberships.</p>
+                        </article>
+                        <div class="stats-highlight">
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Premium Clubs</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10k+</span>
+                                <span class="stat-label">Happy Members</span>
+                            </div>
+                        </div>
+                        <div class="club-features">
+                            <h4>Why Choose UrbanScale Clubs?</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Premium Amenities</li>
+                                <li><i class="fas fa-check-circle"></i> Expert Staff</li>
+                                <li><i class="fas fa-check-circle"></i> Exclusive Events</li>
+                                <li><i class="fas fa-check-circle"></i> Luxury Experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Share Options -->
+                <div class="share-options">
+                    <button class="share-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i> Share on WhatsApp
+                    </button>
+                    <button class="share-btn email">
+                        <i class="fas fa-envelope"></i> Share via Email
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script src="../js/clubData.json"></script>
+    <script src="../js/clubs.js"></script>
+</body>
+</html>

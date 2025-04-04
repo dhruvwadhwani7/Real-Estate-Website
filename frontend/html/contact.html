@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - UrbanScape Real Estate</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Updated Navigation Bar -->
+    <header>
+        <nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo-container">
+                <div class="logo">UrbanScale</div>
+            </div>
+            <div class="nav-links">
+                <a href="home2.html">Home</a>
+                <a href="properties.html">Properties</a>
+                <a href="residential.html">Residentials</a>
+                <a href="home2.html#social-clubs">Clubs</a>
+                <a href="new-added-props.html">Newly Added Properties</a>
+                <a href="#" class="active">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='profile.html'" class="profile-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Add overlay div after nav -->
+        <div class="menu-overlay"></div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="home.html"><i class="fas fa-home"></i>Home</a>
+                <a href="properties.html"><i class="fas fa-building"></i>Properties</a>
+                <a href="residential.html"><i class="fas fa-city"></i>Residentials</a>
+                <a href="home.html#social-clubs"><i class="fas fa-users"></i>Clubs</a>
+                <a href="#ask-ai"><i class="fas fa-robot"></i>Ask AI</a>
+                <a href="#" class="active"><i class="fas fa-envelope"></i>Contact</a>
+            </div>
+            <div class="mobile-auth-buttons">
+                <button class="mobile-sign-in">Sign In</button>
+                <button class="mobile-sign-up">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="quick-enquiry-buttons">
+        <button class="enquiry-btn property-btn">
+            <i class="fas fa-building"></i>
+            General Enquiry
+        </button>
+        <!-- <button class="enquiry-btn residential-btn">
+            <i class="fas fa-home"></i>
+            Residential Enquiry
+        </button> -->
+        <button class="enquiry-btn club-btn">
+            <i class="fas fa-users"></i>
+            Club Membership
+        </button>
+    </div>
+
+    <!-- General Enquiry Modal -->
+    <div class="modal" id="generalEnquiryModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>General Enquiry Form</h2>
+            <form id="enquiryForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required readonly class="readonly-field">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required readonly class="readonly-field">
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <select id="location" name="location" required>
+                        <option value="">Select Location</option>
+                        <option value="ahmedabad">Ahmedabad</option>
+                        <option value="gurgaon">Gurgaon</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="pune">Pune</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <select id="type" name="type" required>
+                        <option value="">Select Type</option>
+                        <option value="residential">Residential</option>
+                        <option value="property">Property</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" id="propertyListContainer" style="display: none;">
+                    <label for="propertyList">Available Properties</label>
+                    <select id="propertyList" name="propertyList">
+                        <option value="">Select Property</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Enquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Club Membership Modal -->
+    <div class="modal" id="clubMembershipModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Club Membership Form</h2>
+            <form id="clubMembershipForm">
+                <div class="form-group">
+                    <label for="clubName">Name</label>
+                    <input type="text" id="clubName" name="clubName" required readonly class="readonly-field">
+                </div>
+                
+                <div class="form-group">
+                    <label for="clubEmail">Email</label>
+                    <input type="email" id="clubEmail" name="clubEmail" required readonly class="readonly-field">
+                </div>
+                
+                <div class="form-group">
+                    <label for="clubType">Club Type</label>
+                    <select id="clubType" name="clubType" required>
+                        <option value="">Select Club Type</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="membershipType">Membership Type</label>
+                    <select id="membershipType" name="membershipType" required>
+                        <option value="">Select Membership Type</option>
+                        <option value="standard">Standard</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+
+                <div class="pricing-plans">
+                    <div class="plan standard-plan">
+                        <h3>Standard Plan</h3>
+                        <div class="plan-details"></div>
+                    </div>
+                    <div class="plan premium-plan">
+                        <h3>Premium Plan</h3>
+                        <div class="plan-details"></div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <div class="contact-details">
+                        <p>UrbanScape Realty</p>
+                        <p>Level 23, One World Center</p>
+                        <p>Lower Parel, Mumbai - 400013</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <div class="contact-details">
+                        <p>+91 9982399786</p>
+                        <p>+91 9510252466</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <div class="contact-details">
+                        <p>urbanscape.info@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Working Hours</h3>
+                    <div class="contact-details">
+                        <p>Monday - Friday: 9am - 6pm</p>
+                        <p>Saturday: 10am - 4pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4111.771494375918!2d72.82431890421043!3d19.003950376726088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cfe902cf8005%3A0x564f469b2595aa90!2sOne%20Lodha%20Place!5e1!3m2!1sen!2sin!4v1742441174369!5m2!1sen!2sin" 
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="map-image">
+            <img src="https://media.istockphoto.com/id/182444113/photo/office-building-exteriors.webp?a=1&b=1&s=612x612&w=0&k=20&c=bf3b6bUyQbhqka7ZXIbcX-xfcsagQjQdhFVLkPoOrNc=" alt="UrbanScale Office Building">
+            <div class="image-overlay">
+                <h3>Our Corporate Office</h3>
+                <p>Visit us at our state-of-the-art facility in the heart of Mumbai</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="enhanced-footer">
+        <!-- <div class="footer-grid">
+            <div class="footer-section company-info">
+                <h3>UrbanScale</h3>
+                <p class="company-desc">Discover your dream property with UrbanScale. We're committed to providing exceptional real estate services across India.</p>
+                <div class="company-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="residential.html">Residentials</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Level 23, One World Center<br>Lower Parel, Mumbai - 400013</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>
+                            <div>+91 9982399786</div>
+                            <div style="margin-top: 5px;">+91 9510252466</div>
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@urbanscape.com</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates and exclusive offers</p>
+                <form class="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div> -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; 2024 UrbanScale. All rights reserved.</p>
+            </div>
+            <div class="footer-bottom-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#cookies">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="success-modal" id="successModal">
+        <div class="success-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Success!</h3>
+            <p>Your enquiry has been submitted successfully. We will contact you shortly.</p>
+            <button class="close-success-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="../js/contact.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

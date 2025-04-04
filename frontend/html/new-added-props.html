@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newly Added Properties - UrbanScape Real Estate</title>
+    <link rel="stylesheet" href="../css/new-added-props.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Updated Navigation Bar -->
+    <header>
+        <nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo-container">
+                <div class="logo">UrbanScale</div>
+            </div>
+            <div class="nav-links">
+                <a href="home2.html">Home</a>
+                <a href="properties.html">Properties</a>
+                <a href="residential.html">Residentials</a>
+                <a href="home2.html#social-clubs">Clubs</a>
+                <a href="#" class="active">Newly Added Properties</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='profile.html'" class="profile-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button onclick="window.location.href='buyer-chat.html'" class="message-btn">
+                    <i class="fas fa-message"></i>
+                </button>
+                <!-- <button onclick="showLogoutModal()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button> -->
+            </div>
+        </nav>
+
+        <!-- Add overlay div after nav -->
+        <div class="menu-overlay"></div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="home.html"><i class="fas fa-home"></i>Home</a>
+                <a href="properties.html"><i class="fas fa-building"></i>Properties</a>
+                <a href="residential.html"><i class="fas fa-city"></i>Residentials</a>
+                <a href="home.html#social-clubs"><i class="fas fa-users"></i>Clubs</a>
+                <a href="#" class="active"><i class="fas fa-plus-circle"></i>Newly Added</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+            </div>
+            <div class="mobile-auth-buttons">
+                <button class="mobile-sign-in">Sign In</button>
+                <button class="mobile-sign-up">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Newly Added Properties Section -->
+    <section class="newly-added-section">
+        <div class="section-header">
+            <h1>Newly Added Properties</h1>
+            <p>Latest additions to our property catalog by our trusted users</p>
+        </div>
+
+        <!-- Properties Grid -->
+        <div class="properties-container">
+            <!-- Property card template -->
+            <template id="property-card-template">
+                <div class="property-card">
+                    <div class="property-image">
+                        <div class="property-status">New</div>
+                        <img src="" alt="Property">
+                    </div>
+                    <div class="property-details">
+                        <div class="property-info">
+                            <h3 class="property-title"></h3>
+                            <div class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span></span>
+                            </div>
+                        </div>
+                        
+                        <div class="property-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-bed"></i>
+                                <span></span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-bath"></i>
+                                <span></span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span></span>
+                            </div>
+                        </div>
+                        
+                        <div class="property-amenities">
+                            <!-- Amenities will be populated dynamically -->
+                        </div>
+
+                        <div class="seller-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="seller-name"></span>
+                        </div>
+                        
+                        <div class="property-footer">
+                            <div class="price"></div>
+                            <a class="message-owner-btn" href="#">
+                                Contact Owner<i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </section>
+
+    <!-- Message Modal -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Send Message to Owner</h2>
+            <div class="property-preview">
+                <img id="modal-property-image" alt="Property">
+                <div class="modal-property-details">
+                    <h3 id="modal-property-title"></h3>
+                    <p id="modal-property-location"></p>
+                    <p id="modal-property-price"></p>
+                </div>
+            </div>
+            <form id="messageForm">
+                <textarea id="messageText" placeholder="Write your message here..." required></textarea>
+                <button type="submit" class="send-message-btn">
+                     Message Owner<i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add logout confirmation modal -->
+    <div id="logoutModal" class="modal">
+        <!-- ...existing code from properties.html modal... -->
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Success!</h2>
+            <p>Your message has been sent successfully to the property owner.</p>
+            <button class="ok-btn">OK</button>
+        </div>
+    </div>
+
+    <script src="../js/new-added-props.js"></script>
+</body>
+</html>

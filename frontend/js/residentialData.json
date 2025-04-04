@@ -1,0 +1,236 @@
+[
+    {
+        "Property ID": "RES1",
+        "Name": "The Grand Vista",
+        "Type": "Apartment",
+        "BHK": "3 & 4 BHK",
+        "Area (sq ft)": 2200,
+        "Price (INR)": 12000000,
+        "Description": "Experience luxury living at its finest in The Grand Vista. These premium 3 & 4 BHK apartments offer spacious living areas with high-end finishes and panoramic city views. The project features modern amenities and is strategically located in Ahmedabad's prime area.",
+        "Location": {
+            "City": "Ahmedabad",
+            "Latitude": 23.0301518449,
+            "Longitude": 72.5885139459,
+            "Address": "Satellite, Ahmedabad, Gujarat, India"
+        },
+        "Starting Price": "1.2 Cr",
+        "Image Link": "../../img/home-4-resident(1).jpg",
+        "Details": {
+            "Construction Year": 2023,
+            "Furnishing": "Unfurnished",
+            "Facing": "East",
+            "Total Towers": 3,
+            "Total Units": 120,
+            "Possession": "Ready to Move",
+            "Additional Features": [
+                "24x7 Security",
+                "Swimming Pool",
+                "Clubhouse",
+                "Gymnasium",
+                "Landscaped Gardens",
+                "Children's Play Area"
+            ],
+            "Nearby": {
+                "Schools": ["Delhi Public School (1 km)", "St. Xavier's School (2 km)"],
+                "Hospitals": ["Apollo Hospital (1.5 km)", "Care Institute (2.5 km)"],
+                "Shopping": ["Satellite Mall (0.5 km)", "City Gold Mall (1.2 km)"],
+                "Transport": ["Satellite Station (1 km)", "BRTS Corridor (0.3 km)"]
+            }
+        }
+    },
+    {
+        "Property ID": "RES2",
+        "Name": "Urban Heights",
+        "Type": "Premium Flats",
+        "BHK": "4 BHK",
+        "Area (sq ft)": 2800,
+        "Price (INR)": 25000000,
+        "Description": "Urban Heights presents luxurious 4 BHK premium flats in Mumbai's prime location. Each residence is crafted with attention to detail, offering spectacular views and world-class amenities.",
+        "Location": {
+            "City": "Mumbai",
+            "Latitude": 19.0760,
+            "Longitude": 72.8777,
+            "Address": "Worli, Mumbai, Maharashtra, India"
+        },
+        "Starting Price": "2.5 Cr",
+        "Image Link": "../../img/home-6-resident(3).jpg",
+        "Details": {
+            "Construction Year": 2023,
+            "Furnishing": "Semi-Furnished",
+            "Facing": "Sea-Facing",
+            "Total Towers": 2,
+            "Total Units": 80,
+            "Possession": "Dec 2024",
+            "Additional Features": [
+                "Infinity Pool",
+                "Sky Lounge",
+                "Private Theater",
+                "Spa & Wellness Center",
+                "Smart Home Features",
+                "Concierge Service"
+            ],
+            "Nearby": {
+                "Schools": ["Bombay International School (1 km)", "Cathedral School (2 km)"],
+                "Hospitals": ["Breach Candy Hospital (1.5 km)", "Jaslok Hospital (2 km)"],
+                "Shopping": ["High Street Phoenix (2 km)", "Palladium Mall (2.5 km)"],
+                "Transport": ["Worli Metro Station (0.5 km)", "Sea Link (1 km)"]
+            }
+        }
+    },
+    {
+        "Property ID": "RES3",
+        "Name": "Green Valley",
+        "Type": "Garden Homes",
+        "BHK": "4 BHK",
+        "Area (sq ft)": 3500,
+        "Price (INR)": 18000000,
+        "Description": "Green Valley offers exclusive villa projects in Pune's most sought-after location. These thoughtfully designed villas combine luxury with nature, providing a serene living environment.",
+        "Location": {
+            "City": "Pune",
+            "Latitude": 18.5204,
+            "Longitude": 73.8567,
+            "Address": "Bavdhan, Pune, Maharashtra, India"
+        },
+        "Starting Price": "1.8 Cr",
+        "Image Link": "../../img/home-5-resident(2).jpg",
+        "Details": {
+            "Construction Year": 2024,
+            "Furnishing": "Unfurnished",
+            "Facing": "Valley View",
+            "Total Units": 45,
+            "Plot Size": "4000 sq ft",
+            "Possession": "June 2024",
+            "Additional Features": [
+                "Private Garden",
+                "Nature Trail",
+                "Clubhouse",
+                "Swimming Pool",
+                "Tennis Court",
+                "24/7 Security"
+            ],
+            "Nearby": {
+                "Schools": ["Symbiosis International School (2 km)", "Mercedes Benz School (3 km)"],
+                "Hospitals": ["Ruby Hall Clinic (4 km)", "Medipoint Hospital (2 km)"],
+                "Shopping": ["Westend Mall (3 km)", "Amanora Mall (5 km)"],
+                "Transport": ["Hinjewadi IT Park (5 km)", "Mumbai-Pune Highway (2 km)"]
+            }
+        }
+    },
+    {
+        "Property ID": "RES4",
+        "Name": "Sky Towers",
+        "Type": "Premium Apartment",
+        "BHK": "4 & 5 BHK",
+        "Area (sq ft)": 3200,
+        "Price (INR)": 35000000,
+        "Description": "Sky Towers represents the pinnacle of luxury living in Gurgaon with premium 4 & 5 BHK apartments. These residences offer unparalleled views and world-class amenities.",
+        "Location": {
+            "City": "Gurgaon",
+            "Latitude": 28.4595,
+            "Longitude": 77.0266,
+            "Address": "Golf Course Road, Gurgaon, Haryana, India"
+        },
+        "Starting Price": "3.5 Cr",
+        "Image Link": "../../img/home-7-resident(4).jpg",
+        "Details": {
+            "Construction Year": 2024,
+            "Furnishing": "Luxury Furnished",
+            "Facing": "Golf Course",
+            "Total Towers": 4,
+            "Total Units": 160,
+            "Possession": "March 2025",
+            "Additional Features": [
+                "Helipad",
+                "Temperature Controlled Pool",
+                "Private Theater",
+                "Golf Simulator",
+                "Wine Cellar",
+                "Concierge Services"
+            ],
+            "Nearby": {
+                "Schools": ["The Heritage School (1 km)", "DPS International (2 km)"],
+                "Hospitals": ["Medanta Hospital (3 km)", "Fortis Hospital (2.5 km)"],
+                "Shopping": ["DLF Galleria (0.5 km)", "Ambience Mall (2 km)"],
+                "Transport": ["Rapid Metro Station (1 km)", "Delhi-Gurgaon Expressway (3 km)"]
+            }
+        }
+    },
+    {
+        "Property ID": "RES5",
+        "Name": "Lake Vista Residences",
+        "Type": "Apartment",
+        "BHK": "3 BHK",
+        "Area (sq ft)": 1800,
+        "Price (INR)": 15000000,
+        "Description": "Lake Vista Residences offers premium 3 BHK lake view apartments in Ahmedabad. Each residence is designed to provide stunning views of the lake while ensuring modern comfort and luxury.",
+        "Location": {
+            "City": "Ahmedabad",
+            "Latitude": 23.0225,
+            "Longitude": 72.5714,
+            "Address": "Vastrapur Lake, Ahmedabad, Gujarat, India"
+        },
+        "Starting Price": "1.5 Cr",
+        "Image Link": "https://images.unsplash.com/photo-1570701123784-2d41777f5e93?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Details": {
+            "Construction Year": 2023,
+            "Furnishing": "Semi-Furnished",
+            "Facing": "Lake View",
+            "Total Towers": 2,
+            "Total Units": 90,
+            "Possession": "Ready to Move",
+            "Additional Features": [
+                "Lake View Balconies",
+                "Infinity Pool",
+                "Yoga Deck",
+                "Modern Gymnasium",
+                "Landscaped Gardens",
+                "Party Terrace"
+            ],
+            "Nearby": {
+                "Schools": ["Udgam School (1 km)", "HB Kapadia School (1.5 km)"],
+                "Hospitals": ["Sterling Hospital (2 km)", "SAL Hospital (2.5 km)"],
+                "Shopping": ["AlphaOne Mall (1 km)", "Vastrapur Mall (0.5 km)"],
+                "Transport": ["Vastrapur Metro (0.8 km)", "BRTS Station (0.3 km)"]
+            }
+        }
+    },
+    {
+        "Property ID": "RES6",
+        "Name": "Garden Paradise",
+        "Type": "Garden Homes",
+        "BHK": "4 BHK",
+        "Area (sq ft)": 2500,
+        "Price (INR)": 28000000,
+        "Description": "Garden Paradise presents exclusive 4 BHK garden homes in Mumbai, offering a perfect blend of nature and luxury. Each residence features private gardens and modern amenities.",
+        "Location": {
+            "City": "Mumbai",
+            "Latitude": 19.0998,
+            "Longitude": 72.8656,
+            "Address": "Powai, Mumbai, Maharashtra, India"
+        },
+        "Starting Price": "2.8 Cr",
+        "Image Link": "https://satyamevdevelopers.com/wp-content/uploads/2025/01/How-to-Increase-the-Value-of-Your-4-BHK-Luxurious-Apartments-in-Ahmedabad-1.webp",
+        "Details": {
+            "Construction Year": 2024,
+            "Furnishing": "Unfurnished",
+            "Facing": "Garden View",
+            "Total Units": 40,
+            "Garden Area": "800 sq ft",
+            "Possession": "Sept 2024",
+            "Additional Features": [
+                "Private Garden",
+                "Rooftop Pool",
+                "Organic Farm",
+                "Meditation Zone",
+                "BBQ Area",
+                "Children's Play Area"
+            ],
+            "Nearby": {
+                "Schools": ["Hiranandani Foundation School (1 km)", "JBCN International (2 km)"],
+                "Hospitals": ["Hiranandani Hospital (1.5 km)", "Powai Hospital (2 km)"],
+                "Shopping": ["D-Mart (0.5 km)", "R City Mall (3 km)"],
+                "Transport": ["Metro Station (1 km)", "Eastern Express Highway (2 km)"]
+            }
+        }
+    }
+]

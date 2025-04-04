@@ -1,0 +1,458 @@
+/* Import base styles from buyer-chat.css */
+@import url('properties.css');
+@import url('buyer-chat.css');
+
+/* Seller-specific overrides and additions */
+.buyers-sidebar {
+    background: white;
+    border-right: 1px solid #eee;
+    overflow-y: auto;
+}
+
+.buyers-list {
+    padding: 10px;
+}
+
+.buyers-list .buyer-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.buyer-item:hover {
+    background: #f0f7ff;
+    transform: translateY(-2px);
+}
+
+.buyer-item.active {
+    background: linear-gradient(135deg, #3498db11, #2980b911);
+    border-left: 4px solid #3498db;
+}
+
+.buyer-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.buyer-info {
+    flex: 1;
+}
+
+.buyer-info h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.property-inquiry {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+.property-type {
+    font-size: 0.8rem;
+    color: #3498db;
+    margin: 4px 0;
+}
+
+.last-message {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 4px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.property-details {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.property-details img {
+    width: 60px;  /* Reduced from default size */
+    height: 60px; /* Reduced from default size */
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.seller-properties-grid {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.seller-properties-grid h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.properties-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+.property-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.property-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.property-card-info {
+    padding: 15px;
+}
+
+.property-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.property-card-price {
+    font-size: 1.2rem;
+    color: #3498db;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.property-card-location {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.property-card-location i {
+    color: #3498db;
+}
+
+.property-stats {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.stat-item i {
+    color: #3498db;
+}
+
+.loading-properties {
+    text-align: center;
+    padding: 40px;
+    grid-column: 1 / -1;
+    color: #666;
+}
+
+.loading-properties i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.property-inquiry-count {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    color: #3498db;
+}
+
+.property-inquiry-count i {
+    font-size: 0.9rem;
+}
+
+.no-inquiries-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.no-inquiries-message i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.message {
+    max-width: 70%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.message.sent {
+    background-color: #0084ff;
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 2px;
+}
+
+.message.received {
+    background-color: #e9ecef;
+    color: #333;
+    margin-right: auto;
+    border-bottom-left-radius: 2px;
+}
+
+.message .sender-name {
+    font-size: 0.8em;
+    margin-bottom: 4px;
+    display: block;
+    font-weight: bold;
+}
+
+.message.sent .sender-name {
+    color: #f0f0f0;
+}
+
+.message.received .sender-name {
+    color: #666;
+}
+
+.message-content {
+    position: relative;
+}
+
+.message-time {
+    font-size: 0.7em;
+    margin-top: 4px;
+    display: block;
+}
+
+.message.sent .message-time {
+    color: #f0f0f0;
+}
+
+.message.received .message-time {
+    color: #666;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.current-chat-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chat-profile-img {
+    width: 40px;  /* Reduced from default size */
+    height: 40px; /* Reduced from default size */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-user-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.chat-user-info .status {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Error toast styling */
+.error-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ff4444;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideIn 0.3s ease-out;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Add loading state styling */
+.loading-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #666;
+    gap: 10px;
+}
+
+.loading-indicator i {
+    color: #3498db;
+}
+
+/* Delete message icon */
+.delete-message {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #e74c3c;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.message:hover .delete-message {
+    opacity: 1;
+}
+
+.delete-message:hover {
+    transform: scale(1.1);
+    background: #f8f9fa;
+}
+
+/* Delete Modal Styles */
+.delete-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.delete-modal.show {
+    opacity: 1;
+}
+
+.delete-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.delete-modal-content h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.delete-modal-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.delete-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.delete-modal-buttons button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.cancel-delete {
+    background: #e0e0e0;
+    color: #666;
+}
+
+.confirm-delete {
+    background: #e74c3c;
+    color: white;
+}
+
+.cancel-delete:hover {
+    background: #d0d0d0;
+}
+
+.confirm-delete:hover {
+    background: #c0392b;
+}

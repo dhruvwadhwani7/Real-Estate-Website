@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - UrbanScape Real Estate</title>
+    <link rel="stylesheet" href="../css/properties.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Updated Navigation Bar -->
+    <header>
+        <nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo-container">
+                <div class="logo">UrbanScale</div>
+            </div>
+            <div class="nav-links">
+                <a href="home2.html">Home</a>
+                <a href="#" id="propertiesLink" class="active">Properties</a>
+                <a href="residential.html">Residentials</a>
+                <a href="home2.html#social-clubs">Clubs</a>
+                <a href="new-added-props.html">Newly Added Properties</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button onclick="window.location.href='profile.html'" class="profile-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+
+                <button onclick="window.location.href='buyer-chat.html'" class="message-btn">
+                    <i class="fas fa-message"></i>
+                </button>
+                <!-- <button onclick="showLogoutModal()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button> -->
+            </div>
+        </nav>
+
+        <!-- Add overlay div after nav -->
+        <div class="menu-overlay"></div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-links">
+                <a href="home.html"><i class="fas fa-home"></i>Home</a>
+                <a href="properties.html"><i class="fas fa-building"></i>Properties</a>
+                <a href="residential.html"><i class="fas fa-city"></i>Residentials</a>
+                <a href="home.html#social-clubs"><i class="fas fa-users"></i>Clubs</a>
+                <a href="#ask-ai"><i class="fas fa-robot"></i>Ask AI</a>
+                <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
+            </div>
+            <div class="mobile-auth-buttons">
+                <button class="mobile-sign-in">Sign In</button>
+                <button class="mobile-sign-up">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <div class="filter-container">
+            <div class="filter-item">
+                <label>Location</label>
+                <select>
+                    <option>Any Location</option>
+                    <option>Mumbai</option>
+                    <option>Pune</option>
+                    <option>Ahmedabad</option>
+                    <option>Gurgaon</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label>Property Type</label>
+                <select>
+                    <option>Any Type</option>
+                    <option>Villa</option>
+                    <option>Penthouse</option>
+                    <option>Bungalow</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label>BHK</label>
+                <select>
+                    <option>Any BHK</option>
+                    <option>1 BHK</option>
+                    <option>2 BHK</option>
+                    <option>3 BHK</option>
+                    <option>4 BHK</option>
+                    <option>5+ BHK</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label>Price Range</label>
+                <select>
+                    <option>Any Price</option>
+                    <option>₹50L - ₹1Cr</option>
+                    <option>₹1Cr - ₹2Cr</option>
+                    <option>₹2Cr - ₹5Cr</option>
+                    <option>₹5Cr+</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label>Area (Sq.ft)</label>
+                <select>
+                    <option>Any Size</option>
+                    <option>500 - 1000</option>
+                    <option>1000 - 1500</option>
+                    <option>1500 - 2000</option>
+                    <option>2000+</option>
+                </select>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="sort-btn" title="Sort Options">
+                    <i class="fas fa-sort"></i>
+                </button>
+                <div class="sort-menu">
+                    <div class="sort-menu-item" data-sort="name-asc">
+                        <i class="fas fa-sort-alpha-down"></i>
+                        Name (A-Z)
+                    </div>
+                    <div class="sort-menu-item" data-sort="name-desc">
+                        <i class="fas fa-sort-alpha-up"></i>
+                        Name (Z-A)
+                    </div>
+                    <div class="sort-menu-item" data-sort="price-asc">
+                        <i class="fas fa-sort-numeric-down"></i>
+                        Price (Low to High)
+                    </div>
+                    <div class="sort-menu-item" data-sort="price-desc">
+                        <i class="fas fa-sort-numeric-up"></i>
+                        Price (High to Low)
+                    </div>
+                    <div class="sort-menu-item" data-sort="area-asc">
+                        <i class="fas fa-chart-line"></i>
+                        Area (Small to Large)
+                    </div>
+                    <div class="sort-menu-item" data-sort="area-desc">
+                        <i class="fas fa-chart-line fa-flip-vertical"></i>
+                        Area (Large to Small)
+                    </div>
+                </div>
+                <button class="search-btn" title="Search"><i class="fas fa-search"></i></button>
+                <button class="reset-btn" title="Reset Filters"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+        <div id="property-map"></div>
+        <div class="map-controls">
+            <button class="toggle-map">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Toggle Map</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Properties Grid -->
+    <div class="properties-container">
+        <!-- Property card template - Will be populated dynamically -->
+        <template id="property-card-template">
+            <div class="property-card">
+                <div class="property-image">
+                    <div class="property-status">For Sale</div>
+                    <img src="" alt="Property">
+                </div>
+                <div class="property-details">
+                    <div class="property-info">
+                        <h3 class="property-title"></h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="property-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-bed"></i>
+                            <span></span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-bath"></i>
+                            <span></span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="property-amenities">
+                        <div class="shape-decorator"></div>
+                        <div class="shape-decorator"></div>
+                        <!-- Amenities will be populated dynamically -->
+                    </div>
+                    
+                    <div class="property-footer">
+                        <div class="price"></div>
+                        <a class="view-details" href="#" id="">
+                            Explore Property <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+    
+    <!-- Property Blog Section -->
+    <section class="property-blog">
+        <div class="blog-container">
+            <div class="blog-image">
+                <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Modern Property">
+                <div class="image-overlay">
+                    <div class="image-overlay-content">
+                        <h3>Find Your Dream Property</h3>
+                        <p>Explore our curated collection of premium properties designed to match your lifestyle and preferences.</p>
+                        <!-- <button class="enquire-btn">Schedule Viewing</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="blog-content">
+                <h2>Discover Prime Properties</h2>
+                <div class="property-features">
+                    <div class="feature">
+                        <i class="fas fa-home"></i>
+                        <h3>Premium Locations</h3>
+                        <p>Strategically located properties in the most sought-after neighborhoods.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Investment Potential</h3>
+                        <p>Properties with high appreciation value and rental yield opportunities.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Verified Properties</h3>
+                        <p>All properties are legally verified and ready for immediate purchase.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Expert Guidance</h3>
+                        <p>Professional assistance throughout your property buying journey.</p>
+                    </div>
+                </div>
+                <div class="property-highlights">
+                    <h3>Property Benefits</h3>
+                    <div class="highlights-grid">
+                        <span><i class="fas fa-medal"></i> Premium Build Quality</span>
+                        <span><i class="fas fa-leaf"></i> Eco-Friendly</span>
+                        <span><i class="fas fa-file-contract"></i> Clear Titles</span>
+                        <span><i class="fas fa-money-bill-wave"></i> Easy Financing</span>
+                        <span><i class="fas fa-clock"></i> Ready to Move</span>
+                        <span><i class="fas fa-paint-roller"></i> Customizable</span>
+                    </div>
+                </div>
+                <a href="#" class="property-cta" onclick="openVisitForm(event)">Book Property Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Visit Form Modal -->
+    <div class="property-visit-modal" id="propertyVisitForm">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVisitForm()">&times;</span>
+            <h2>Schedule Property Visit</h2>
+            <form id="visitForm">
+                <div class="form-group">
+                    <label for="visitorName">Name</label>
+                    <input type="text" id="visitorName" name="visitorName" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="visitorEmail">Email</label>
+                    <input type="email" id="visitorEmail" name="visitorEmail" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="visitLocation">Select Location</label>
+                    <select id="visitLocation" name="visitLocation" required>
+                        <option value="">Select Location</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Gurgaon">Gurgaon</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="visitProperty">Select Property</label>
+                    <select id="visitProperty" name="visitProperty" required>
+                        <option value="">Select Property</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="visitTime">Select Time</label>
+                    <input type="datetime-local" id="visitTime" name="visitTime" required>
+                </div>
+                <button type="submit" class="submit-btn">Schedule Visit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Property Modal -->
+    <div class="property-modal" id="propertyModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add logout confirmation modal before closing body tag -->
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLogoutModal()">&times;</span>
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to log out?</p>
+            <div class="modal-actions">
+                <button onclick="confirmLogout()" class="confirm-btn">Yes</button>
+                <button onclick="closeLogoutModal()" class="cancel-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-spinner-container">
+            <div class="spinner"></div>
+            <div class="loading-text">Scheduling your visit...</div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="success-modal">
+        <div class="modal-content">
+            <div class="success-content">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h2>Visit Scheduled Successfully!</h2>
+                <p>Your property visit has been scheduled. Our team will contact you shortly.</p>
+                <button class="ok-btn" onclick="closeSuccessModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add the sell property button before closing body tag
+    <a href="sell-property.html" class="sell-property-btn">
+        <i class="fas fa-home"></i>
+        <span>Wanna sell property?<br>Sell here</span>
+    </a> -->
+
+    <!-- Add Success Modal -->
+    <div id="successModal" class="success-modal">
+        <div class="modal-content">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+            <div class="success-content" style="display: none;">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h2>Visit Scheduled Successfully!</h2>
+                <p>Your property visit has been scheduled. Our team will contact you shortly.</p>
+                <button class="ok-btn" onclick="closeSuccessModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Update the scripts section at the bottom -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script src="../js/propertyData.js"></script>
+    <script src="../js/properties.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>
