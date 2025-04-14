@@ -27,6 +27,11 @@ section {
                 url('../../img/home-back2.jpg') center/cover;
     position: relative;
 }
+.header-hero-2{
+    background: linear-gradient(rgba(41, 40, 40, 0.5), rgba(0, 0, 0, 0.7)),
+                url('https://cre.domainstatic.com.au/17455665_16_1_250225_120350-w1152-h768') center/cover;
+    
+}
 
 .header-hero::after {
     content: '';
