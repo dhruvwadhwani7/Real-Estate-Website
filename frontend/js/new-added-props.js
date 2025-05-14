@@ -11,7 +11,7 @@ function closeLogoutModal() {
 }
 
 function confirmLogout() {
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
 }
 
 // Function to fetch newly added properties

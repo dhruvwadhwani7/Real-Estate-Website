@@ -249,7 +249,7 @@ function handleLogout() {
     sessionStorage.clear();
     
     // Redirect to home page
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
 }
 
 // Close modal when clicking outside

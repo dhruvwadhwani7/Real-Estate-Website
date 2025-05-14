@@ -1,7 +1,7 @@
 // Back to Home button functionality
 document.querySelector('.back-home').addEventListener('click', (e) => {
     e.preventDefault();
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
 });
 
 // Form validation functions
